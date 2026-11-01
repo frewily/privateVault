@@ -1,0 +1,30 @@
+# Project-local SDKs, downloaded cores, and development runtime data.
+.tools/
+.local/
+**/.dart_tool/
+**/build/
+**/.flutter-plugins-dependencies
+**/.packages
+**/Flutter/ephemeral/
+**/Pods/
+**/xcuserdata/
+**/DerivedData/
+**/.DS_Store
+**/*.log
+**/__pycache__/
+**/local.properties
+**/key.properties
+**/*.jks
+**/*.keystore
+**/.gradle/
+**/.kotlin/
+# Local credentials and signing exports; templates may be versioned.
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+**/*.p12
+**/*.pfx
+**/*.mobileprovision

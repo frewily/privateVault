@@ -1,0 +1,150 @@
+{
+  "recorded_date": "2026-10-27",
+  "authorization_choice": {
+    "route": "R2 / user option B",
+    "source": "direct user instruction: 既然 B 已经有现成的，那就先用 B 吧。",
+    "actual_authorization_performed": false
+  },
+  "repository": "OpenListTeam/OpenList-APIPages",
+  "commit": "4322fd1f0f5e4e77454fd8a5edb89727854b0092",
+  "sources": [
+    {
+      "path": "src/driver/baiduyun_oa.ts",
+      "blob": "303d1bbe901fc7c6e0aeaea398eddfd87fa2e1d7",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/src/driver/baiduyun_oa.ts",
+      "observed_lines": 137,
+      "range": null
+    },
+    {
+      "path": "src/index.ts",
+      "blob": "2e2f85c3abd0d0c12969545283d218ea2e99a175",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/src/index.ts",
+      "observed_lines": 200,
+      "range": [
+        1,
+        200
+      ]
+    },
+    {
+      "path": "src/shares/refresh.ts",
+      "blob": "ff98461e207a610c64a11bf53eb1244166f3e184",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/src/shares/refresh.ts",
+      "observed_lines": 43,
+      "range": null
+    },
+    {
+      "path": "src/shares/request.ts",
+      "blob": "8e1be3b561548502fb77b77cf01398569e645d67",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/src/shares/request.ts",
+      "observed_lines": 52,
+      "range": null
+    },
+    {
+      "path": "src/shares/configs.ts",
+      "blob": "ffcc4210071bae9b7fe0d2f8a107daa99c2d5c7c",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/src/shares/configs.ts",
+      "observed_lines": 39,
+      "range": null
+    },
+    {
+      "path": "src/shares/secrets.ts",
+      "blob": "4aa8444564c4fef44b38ef03659b1c75d6591ab5",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/src/shares/secrets.ts",
+      "observed_lines": 21,
+      "range": null
+    },
+    {
+      "path": "frontend/src/pages/TokenPage.tsx",
+      "blob": "f660259013d3e79e353599cfe8be8f38590728a6",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/frontend/src/pages/TokenPage.tsx",
+      "observed_lines": 180,
+      "range": [
+        1,
+        180
+      ]
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "blob": "3b17de4981509fde3c24f40d5afd148226ff132e",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/frontend/src/App.tsx",
+      "observed_lines": 78,
+      "range": null
+    },
+    {
+      "path": "README.md",
+      "blob": "9db25996e3807c365aa2add8cf30dc33ef680f9d",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/README.md",
+      "observed_lines": 52,
+      "range": [
+        1,
+        52
+      ]
+    },
+    {
+      "path": "frontend/src/lib/api.ts",
+      "blob": "b8a87153fa927ad7ad5968330b57fbf8400e5167",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/frontend/src/lib/api.ts",
+      "range": [
+        1,
+        180
+      ]
+    },
+    {
+      "path": "frontend/src/lib/drivers.ts",
+      "blob": "8e329db115c905fa27524bdf933b1c14deed1f97",
+      "url": "https://github.com/OpenListTeam/OpenList-APIPages/blob/4322fd1f0f5e4e77454fd8a5edb89727854b0092/frontend/src/lib/drivers.ts",
+      "range": [
+        1,
+        180
+      ]
+    }
+  ],
+  "public_network_observations": [
+    {
+      "url": "https://api.oplist.org/",
+      "method": "GET",
+      "http_status": 200,
+      "anonymous": true,
+      "title": "OpenList Token",
+      "script_path": "/static/index-BICJddDe.js",
+      "executed_javascript": false
+    },
+    {
+      "url": "https://pan.baidu.com/union/doc/使用入门/接入授权/授权码模式/",
+      "method": "GET",
+      "http_status": 200,
+      "anonymous": true
+    },
+    {
+      "url": "https://pan.baidu.com/union/doc/使用入门/接入授权/快速授权/",
+      "method": "GET",
+      "http_status": 200,
+      "anonymous": true
+    }
+  ],
+  "baidu_document_extracts": [
+    "Access Token 有效期30天，过期后支持刷新，刷新后的 Access Token 有效期仍为 30 天，刷新Access Token请按需刷新，不需要不停的刷新。",
+    "刷新请求，如果API返回失败，旧的refresh_token会失效，此时需要重新发起授权请求，获取新的 Access Token、refresh_token，而不是使用旧的 refresh_token 循环再发起刷新请求。",
+    "refresh_token 只支持使用一次，refresh_token 使用后失效，下次刷新 Access Token 时需要使用上一次刷新请求响应中的 refresh_token。",
+    "快速授权说明访问路径必须位于 authorized_paths 及其子目录内；不是已证明 OpenList 旧授权分支兼容该流程。"
+  ],
+  "findings": {
+    "preset_app_credentials_in_service_environment": true,
+    "legacy_authorization_scope": "basic,netdisk",
+    "callback_carries_tokens_in_encoded_url_fragment": true,
+    "encoded_fragment_is_encryption": false,
+    "inter_device_refresh_coordination_in_inspected_path": "not present in inspected functions; not a whole-service absence proof",
+    "new_grant_effect_on_existing_grant": "unverified; no independence guarantee found",
+    "deployed_service_revision": "unverified"
+  },
+  "operations_not_performed": [
+    "OAuth login request endpoint",
+    "OAuth callback endpoint",
+    "refresh endpoint",
+    "Baidu account login",
+    "cloud file API",
+    "existing config or credential read",
+    "test core start",
+    "implementation or deployment"
+  ]
+}

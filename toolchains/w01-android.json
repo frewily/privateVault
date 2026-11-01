@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "status": "owner-reported first three visible phone checks passed; full process/fault matrix remains unverified",
+  "flutter": {
+    "version": "3.47.5",
+    "commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+    "engine": "af7e796e161ae0bb1ff0758c71a7105418bd9ded"
+  },
+  "go": {
+    "version": "go1.27.3",
+    "archive": "go1.27.3.darwin-arm64.tar.gz",
+    "bytes": 68196737,
+    "sha256": "dd3908cf20959d798c1e06ebe5b72213f0505ce01373b40ce3110975a6cd99c2",
+    "url": "https://go.dev/dl/go1.27.3.darwin-arm64.tar.gz"
+  },
+  "gomobile": {
+    "commit": "19777044486779222400e9ca16c4306f9c6dbfa9"
+  },
+  "openlist": {
+    "version": "v4.2.8",
+    "commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+    "runtime_driver_allowlist": [
+      "Local",
+      "BaiduNetdisk",
+      "Crypt"
+    ],
+    "compiled_driver_packages": [
+      "base",
+      "baidu_netdisk",
+      "crypt",
+      "local",
+      "115",
+      "115_open",
+      "123",
+      "123_open",
+      "189pc",
+      "guangyapan",
+      "pikpak",
+      "thunder",
+      "thunder_browser",
+      "thunderx",
+      "openlist"
+    ],
+    "strict_driver_pruning_complete": false
+  },
+  "gradle": {
+    "version": "9.3.1",
+    "distribution": "bin",
+    "bytes": 137037885,
+    "sha256": "b266d5ff6b90eada6dc3b20cb090e3731302e553a27c5d3e4df1f0d76beaff06"
+  },
+  "agp": "9.1.0",
+  "kotlin": "2.4.0",
+  "jdk": "17.0.15",
+  "compile_sdk": 36,
+  "target_sdk": 36,
+  "min_sdk": 24,
+  "native_api": 24,
+  "ndk": "28.2.13676358",
+  "build_tools": "36.0.0",
+  "abi": "arm64-v8a",
+  "application_id": "dev.privatevault.w01",
+  "network": {
+    "owner_allowance_bytes": 3221225472,
+    "gateway_limit_bytes": 3154116608,
+    "reserve_bytes": 67108864,
+    "ledger": ".local/w01-a/network-budget.json",
+    "renewal": "explicit-owner-approval-required",
+    "grants": [
+      {
+        "id": "initial-1GiB",
+        "bytes": 1073741824
+      },
+      {
+        "id": "20261101-extra-2GiB",
+        "bytes": 2147483648,
+        "starting_accounted_bytes": 1006632960,
+        "authorization": "explicit user reply: allow up to 2GiB additional downloads"
+      }
+    ]
+  },
+  "device_operations_authorized": false,
+  "git_write_operations_authorized": true,
+  "go_modules": {
+    "upstream_sha256": {
+      "go.mod": "bee94377f67c568b7aef0dec840e290a213665f86a3b79685a73a36f490e8500",
+      "go.sum": "4b97daef60adaa3b9894f28a7c447fe90a515b457719ea957cd2e8e79f4d1332"
+    },
+    "locked": {
+      "go.mod": {
+        "path": "toolchains/w01-android.go.mod",
+        "sha256": "f1005b52c36bd2fa60809a14ca217376f773edb0a142cbf84b00c9687dc21ae2"
+      },
+      "go.sum": {
+        "path": "toolchains/w01-android.go.sum",
+        "sha256": "3304ede0f5c43338a76d0001225a6e5dcf0a6292700db68f2efc054db5b4c627"
+      }
+    },
+    "resolution_note": "Pinned gomobile requires higher golang.org/x module versions; this explicit lock records the actual MVS combination, not the unchanged stock module graph."
+  },
+  "shared_toolchain_manifest": "toolchains/shared-local.json",
+  "verified_on": "2026-11-01",
+  "kotlin_compiler_resolved": "2.4.0",
+  "apk": {
+    "bytes": 144463149,
+    "sha256": "1c9b646725f8bdc262c1fb9896449c874c810b25a6ded48b5aa5b8b03b335f20",
+    "certificate_sha256": "b742c39a2b3e4be2662ccd2e9bea874d3b7501aac3e984b7ecc0e650bd46db53",
+    "core_build_id": "pv-w01a-eb7fff012b4d24b9",
+    "package": "dev.privatevault.w01",
+    "version_name": "0.1.0-w01a",
+    "version_code": "1",
+    "min_sdk": 24,
+    "target_sdk": 36,
+    "abi": "arm64-v8a"
+  },
+  "owner_manual_feedback": {
+    "date": "2026-11-01",
+    "evidence_type": "user_reported_manual_use",
+    "user_quote": "全都成功了，还有下次安装包别整这么大，针对我手机出一个安装包就行了",
+    "device_context": "OnePlus Ace 5 Ultra / Android16, as previously user-reported; not queried",
+    "cases": [
+      {
+        "name": "first startup and verified sample visible",
+        "status": "user_reported_pass"
+      },
+      {
+        "name": "three complete stop/start cycles",
+        "status": "user_reported_pass"
+      },
+      {
+        "name": "background return and restart/read",
+        "status": "user_reported_pass"
+      }
+    ],
+    "assistant_device_access": false,
+    "installed_device_artifact_hash_independently_checked": false,
+    "uncovered": [
+      "startup cancellation",
+      "Binder death",
+      "core/main process unexpected exit",
+      "orphan process checks",
+      "error recovery",
+      "actual kernel page size"
+    ]
+  },
+  "next_owner_apk_policy": {
+    "target_device": "current owner phone",
+    "abi": "arm64-v8a only",
+    "delivery_count": 1,
+    "preferred_build": "regression-verified release or equivalent size-optimized build",
+    "debug_delivery": "only when explicitly needed for diagnostics, with size explained",
+    "keep_package_and_update_certificate_compatible": true,
+    "measure_size_before_delivery": true,
+    "specific_size_not_promised": true,
+    "standalone_old_feature_reinstallation_requested": false,
+    "combine_optimization_with_next_feature_delivery": true,
+    "optimized_release_entry_verified": false
+  },
+  "release_optimization": {
+    "status": "CONFIGURATION_PREPARED_BUILD_INCOMPLETE_NO_APK",
+    "default_build_mode": "release",
+    "diagnostic_build_argument": "debug",
+    "candidate_version_name": "0.1.0-w01a.2",
+    "candidate_version_code": 2,
+    "abi": "arm64-v8a",
+    "minify_enabled": true,
+    "shrink_resources": true,
+    "native_libraries": "compressed in APK; extracted by Android installer",
+    "signing": "same local W01 development certificate; not production signing",
+    "blocking_dependency": "com.android.tools.lint:lint-gradle:32.1.0",
+    "apk_size_measured": false,
+    "new_device_regression_requested": false,
+    "report": "docs/validation/31-W01-A包体优化准备与推进调整-v0.1.md"
+  },
+  "git_write_authorization_scope": "2026-11-01 explicit owner instruction: save and push round1 to existing origin; not a standing approval for later round commits or releases"
+}

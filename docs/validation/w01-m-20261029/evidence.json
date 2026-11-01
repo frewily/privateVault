@@ -1,0 +1,318 @@
+{
+  "schema_version": 2,
+  "phase": "W01-M",
+  "status": "complete_within_approved_scope",
+  "started_date": "2026-10-29",
+  "completed_date": "2026-10-30",
+  "timezone": "Asia/Shanghai",
+  "authorization": "Explicit W01-M approval. Xcode installed/licensed by the user. No Android, real upstream account/storage, VPS, stage/commit/push or publishing.",
+  "environment": {
+    "os": "27.0.1",
+    "architecture": "arm64",
+    "toolchain": {
+      "schema_version": 1,
+      "flutter_tag": "3.47.5",
+      "flutter_commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+      "flutter_engine": "af7e796e161ae0bb1ff0758c71a7105418bd9ded",
+      "openlist_version": "v4.2.8",
+      "openlist_commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+      "openlist_archive_sha256": "c845f509d784a936ce53610c5643cedd05223e42ceb63fce5ad1bacbca1bbcd7",
+      "openlist_source_binary_sha256": "f8ced5c3e34de944ddbfc187181b9666cfa076f02281d38e301dc56eaa82933e",
+      "fixture_sha256": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+      "architecture": "arm64",
+      "bundle_id": "dev.privatevault.w01",
+      "xcode_version": "27.1",
+      "dart_version": "3.13.4",
+      "note": "W01-M local development build, sandboxed integration, parent-pipe supervision, force-quit recovery and clean shutdown verified. Source core and locally signed helpers retain separate digests; not a public release.",
+      "dart_sdk_archive_sha256": "a1cd3836851d59a65f3c03400b27837d47537c5ff2473fe8e600bdb49c6e828e",
+      "xcode_build": "27A9275",
+      "xcode_first_launch_check_passed": true,
+      "verified_on": "2026-10-30",
+      "w01_m_status": "verified"
+    }
+  },
+  "checks": {
+    "dart_static_analysis": {
+      "passed": true,
+      "issues": 0
+    },
+    "headless_widget_channel_tests": {
+      "passed": 8,
+      "failed": 0,
+      "scope": "mock hosts/channels, not a substitute for Mac integration"
+    },
+    "native_supervised_checks": [
+      {
+        "check": "authenticated_local_read",
+        "fixture_bytes": 14415,
+        "fixture_sha256": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+        "passed": true,
+        "phase": "ready"
+      },
+      {
+        "check": "jwt_valid_and_tamper_rejection",
+        "passed": true
+      },
+      {
+        "check": "jwt_wrong_key_rejected",
+        "passed": true
+      },
+      {
+        "check": "jwt_algorithm_substitution_rejected",
+        "passed": true
+      },
+      {
+        "check": "jwt_expired_token_rejected",
+        "passed": true
+      },
+      {
+        "check": "idempotent_start",
+        "fixture_bytes": 14415,
+        "fixture_sha256": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+        "passed": true,
+        "phase": "ready"
+      },
+      {
+        "check": "second_host_cannot_take_over",
+        "error_code": "instance_busy",
+        "passed": true,
+        "phase": "failed"
+      },
+      {
+        "check": "core_exit_detected",
+        "error_code": "core_exited",
+        "passed": true,
+        "phase": "failed"
+      },
+      {
+        "check": "restart_after_core_exit",
+        "fixture_bytes": 14415,
+        "fixture_sha256": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+        "passed": true,
+        "phase": "ready"
+      },
+      {
+        "check": "stop_releases_run",
+        "passed": true,
+        "phase": "stopped"
+      },
+      {
+        "check": "idempotent_stop",
+        "passed": true,
+        "phase": "stopped"
+      },
+      {
+        "check": "repeat_cycle_1",
+        "passed": true,
+        "phase": "stopped"
+      },
+      {
+        "check": "repeat_cycle_2",
+        "passed": true,
+        "phase": "stopped"
+      },
+      {
+        "check": "bad_digest_rejected",
+        "error_code": "integrity_mismatch",
+        "passed": true,
+        "phase": "failed"
+      },
+      {
+        "check": "supervisor_bad_digest_rejected",
+        "error_code": "integrity_mismatch",
+        "passed": true,
+        "phase": "failed"
+      },
+      {
+        "check": "missing_core_rejected",
+        "error_code": "missing_core",
+        "passed": true,
+        "phase": "failed"
+      },
+      {
+        "check": "stop_during_start",
+        "passed": true,
+        "phase": "stopped"
+      },
+      {
+        "check": "restart_after_cancel",
+        "fixture_bytes": 14415,
+        "fixture_sha256": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+        "passed": true,
+        "phase": "ready"
+      },
+      {
+        "check": "unknown_identity_preserved",
+        "error_code": "ownership_unverified",
+        "passed": true,
+        "phase": "failed"
+      },
+      {
+        "check": "occupied_listener_not_taken_over",
+        "error_code": "launch_failed",
+        "passed": true,
+        "phase": "failed"
+      }
+    ],
+    "native_supervised_host_recovery": {
+      "check": "native_host_force_quit_recovery",
+      "passed": true,
+      "core_alive_after_fault": false,
+      "core_readback_verified": true
+    },
+    "final_macos_integration": {
+      "passed": 1,
+      "failed": 0,
+      "startup_cancel_covered": true,
+      "start_read_stop_cycles": 3,
+      "actual_sandboxed_app": true,
+      "foreground_request_warning_observed": true,
+      "manual_window_checked_separately": true
+    },
+    "actual_app_force_quit": {
+      "fault": "app_unexpected_exit",
+      "only_verified_test_process_signalled": true,
+      "target_exited": true,
+      "core_alive_after_fault": false,
+      "app_alive_after_fault": false,
+      "controlled_test_cleanup_only": false
+    },
+    "actual_app_recovery": {
+      "pending_record_observed": true,
+      "fresh_ready_observed": true,
+      "fixture_bytes": 14415,
+      "foreground_confirmation_date": "2026-10-30"
+    },
+    "core_fault": {
+      "injection": {
+        "fault": "core_unexpected_exit",
+        "only_verified_test_process_signalled": true,
+        "target_exited": true,
+        "core_alive_after_fault": false,
+        "app_alive_after_fault": true,
+        "controlled_test_cleanup_only": false
+      },
+      "actual_error_display_observed": true,
+      "native_final_source_regression_passed": true
+    },
+    "final_signatures": {
+      "components": [
+        {
+          "component": "app",
+          "signature_valid": true,
+          "sandbox": true,
+          "inherit": false
+        },
+        {
+          "component": "core",
+          "signature_valid": true,
+          "sandbox": true,
+          "inherit": true
+        },
+        {
+          "component": "supervisor",
+          "signature_valid": true,
+          "sandbox": true,
+          "inherit": true
+        }
+      ],
+      "bundle_deep_signature_valid": true,
+      "verified_date": "2026-10-30",
+      "normal_main_entry_verified": true
+    },
+    "final_cleanup": {
+      "normal_app_exit_observed": true,
+      "owned_test_processes_remaining": 0,
+      "active_marker_remaining": false,
+      "runtime_runs_remaining": 0,
+      "final_recovered_ready_observed": true,
+      "final_fixture_bytes": 14415,
+      "finish_date": "2026-10-30"
+    },
+    "project_plist_and_script_syntax": "passed"
+  },
+  "built_development_app": {
+    "relative_path": "apps/privatevault/build/macos/Build/Products/Debug/PrivateVault W01.app",
+    "bundle_id": "dev.privatevault.w01",
+    "manifest": {
+      "version": "v4.2.8",
+      "source_sha256": "f8ced5c3e34de944ddbfc187181b9666cfa076f02281d38e301dc56eaa82933e",
+      "runtime_sha256": "7b9dfdb10d4586a1a3fd163e2f20b5ca46605772353d3e173ad38716e328a2be",
+      "fixture_sha256": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+      "supervisor_sha256": "0c9cb21995285f081d55ff138eed64062574fa51fa4af53400fd8960620b0d38"
+    },
+    "main_executable_sha256": "8d43a10013882061240c68ebbf455a39fd10eaa2cc64260fbb45a9e50cfd38b6",
+    "fixture_sha256": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901"
+  },
+  "source_sha256": {
+    ".gitignore": "0447c27c8d71563a7c32beee674d97c7baf7edd30c2a54ea6cfb1c7080948607",
+    "apps/privatevault/.metadata": "898f7137b36eeb8501027c58965373f9509d3247525767b1d28c032ea6b7c2ae",
+    "apps/privatevault/analysis_options.yaml": "b7a851be9e9d3b83cda230f7ad13ce61c66d98f0770621faf45008febdada1db",
+    "apps/privatevault/assets/w01_sample.png": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+    "apps/privatevault/integration_test/w01_macos_test.dart": "e282cc1c862b5a8f2c0eb4d7d6ea755fa4b41462c8cd157389ecdd120803a06c",
+    "apps/privatevault/lib/app.dart": "48726c6d6d146908dfa1c18b44d8f01dfc5a9d2de7d007fb2c214b5e6398043c",
+    "apps/privatevault/lib/core_host/core_host.dart": "b787b10b10eff9176b181fa7fb54a350416cbdfca9fa83caf102a17cffd6bb17",
+    "apps/privatevault/lib/core_host/core_state.dart": "ea3b9f78211e691467ced9842b7d0a7fcbae12321d5a2589e01603e148ba8aff",
+    "apps/privatevault/lib/core_host/macos_core_host.dart": "6eeb042d48722891ed532186912c00b66d1519311ea538fb25e2b2d176d3c3b9",
+    "apps/privatevault/lib/features/core_status/core_status_page.dart": "d9de8b670bc698dd53ef2df181864c51349aa2caee6cf3f1da1d2d7f0bbad7cd",
+    "apps/privatevault/lib/main.dart": "d3840bfdb2a727373f9a432bcd7334e25216b4f0ae2d6365e26dbbc844a98a79",
+    "apps/privatevault/macos/Helpers/CoreSupervisor.swift": "09cfbedeb3c30d2b176abcef25b1d76b469ebd8b357e5661c1d373a885df4562",
+    "apps/privatevault/macos/Runner/AppDelegate.swift": "fa457ade4829a5ea2ae2471865607b4f27bb63702739a02d8c84cf0cb5582817",
+    "apps/privatevault/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json": "bc6ba8105ca69651aeeb77358851590de295dca04681a1d58c0f449641c242f3",
+    "apps/privatevault/macos/Runner/Configs/AppInfo.xcconfig": "43327a62bb6b590574dbf80966d51e80cd9ed4bdf09e602f4d93845d6ea6ce21",
+    "apps/privatevault/macos/Runner/Configs/Debug.xcconfig": "8067d533ef6593760baad9a9855a786a7a77470fcc3f0925ec04fe43bc1ac4b0",
+    "apps/privatevault/macos/Runner/Configs/Release.xcconfig": "7a6a4b4d973a23052fa0a0388dd261e32d311d7b66ba1bfc3b914b361808ac61",
+    "apps/privatevault/macos/Runner/Configs/Warnings.xcconfig": "0e341a392b16ad302d12890aa3dac9257a6c10ece685437604259a85341645a3",
+    "apps/privatevault/macos/Runner/CoreBridge.swift": "ea617003846b7e1a39ba75498e462a1cce3dd0ec3e980a61ba84180466da416c",
+    "apps/privatevault/macos/Runner/CoreController.swift": "fa890049283cba3d0bfb426c95746f0017a14ecfcb78ff3002cc5986537b5a33",
+    "apps/privatevault/macos/Runner/CoreTypes.swift": "443c79c31fa63b68695575ef98ffc1fa2f6516d6fce55d287ffe3be11666effb",
+    "apps/privatevault/macos/Runner/DebugProfile.entitlements": "5322f4decc6fff6056dde0f238c69c4a65a6d88e260c7437e22bf08e2329aa48",
+    "apps/privatevault/macos/Runner/Info.plist": "97cce32fd9fb39a7b555e3855e24ad227e5fac5d0a62d8e2e7cc5e9b5503f821",
+    "apps/privatevault/macos/Runner/MainFlutterWindow.swift": "7c8904da20843cc5325f0275959a11c1e6726ad31dabdde8d9b70992d39289ac",
+    "apps/privatevault/macos/Runner/Release.entitlements": "c8b93a3d569c97d3e5b74851ab0d7459d4fc50f5ea8ac9b6ef68143288a62b48",
+    "apps/privatevault/macos/Runner.xcodeproj/project.pbxproj": "6ca73ecb4472e029324085015725b60cd876eb2ee879449bb04ff4a7d2d97ab8",
+    "apps/privatevault/pubspec.lock": "a8ea97ca288738ec9ef669f694c0a4a8d59d345362611d02bffbdf5ee5b97d93",
+    "apps/privatevault/pubspec.yaml": "ff3e8e39f2c1c9d6e76148070f679a02c015566d3468fe51991b84e4a35b012a",
+    "apps/privatevault/test/core_host/core_state_test.dart": "510a6a9b11dca3f9a5df8c413e20c670719788489650928c27e366055c50a214",
+    "apps/privatevault/test/core_host/macos_core_host_test.dart": "38128241e4931932825cdf62f68404276f5b9f10107200378ee7cc2d32d59d96",
+    "apps/privatevault/test/core_status_page_test.dart": "3e24f8fcfd133ff04f6a38cb8b51e9a2272b414ec79341c3298a21ae5c9fe041",
+    "apps/privatevault/test/native/CoreHostSmoke.swift": "8b9cdc9dc917cac85b79a15410a38853285868f0fa47dbf39b879fea6c504a96",
+    "toolchains/w01-macos.json": "d663facfdc8a671137d17d3a2815a94132b6aeb91ac83b8ba3828fce2b7f8e0d",
+    "tools/check_w01_app_fault.py": "befee6b9ed90fb1e6903e5575552a43f7e168921552b28ec3c8ef6e528b64509",
+    "tools/check_w01_dart.sh": "e52c9fdc5616803c78cf792060e50add8e9a0592c3d56fef403897818e0a8cda",
+    "tools/check_w01_native.sh": "0ba2ea8d1445403a7709c082c9fa9d62a053ca96398a96a30bd3e55952c9646e",
+    "tools/check_w01_recovery.py": "ab8863fdca7410d5c4258bacd02667b066ee862388aa53643eef6df49a0bbd95",
+    "tools/configure_w01_macos.py": "f95006bfcc8e00c30fa17c1efbf59ccf9d31965827daafec584615eb23ed57d0",
+    "tools/core_helper.entitlements": "c5863c5669a795b20159d804a33b3721c55949864f6301e0d4f82142d99d0c8c",
+    "tools/prepare_core_macos.py": "f389f4fc73e4e9ad55f69a7e173c6c662d2bee97a0ec61e49cfbfb4bd4078c5e",
+    "tools/prepare_core_macos.sh": "c01dbc4b0aef07bec099a082b79fe56d2b242ece911df6ecb52bfc6fb7273b5d",
+    "tools/run_w01_macos.sh": "9c2c86eb3927e5b874b4301d2d7f6a0872428c807626e75e61211b469d3b26d6"
+  },
+  "scope_limits": [
+    "Only Mac host and synthetic Local PNG, not the full E1 or first version",
+    "No new Android/Windows implementation or runtime verification",
+    "No real Baidu/source-site account or cloud operations",
+    "No media downloading, Crypt-library integration, playback, account service or metadata sync",
+    "Compound failure of both parent and supervisor is not claimed automatically recoverable",
+    "No complete core outbound-traffic capture",
+    "Local development signature only, no notarization/distribution",
+    "One-hour local test session; long-lived refresh/background behavior not verified"
+  ],
+  "privacy": {
+    "original_openlist_credentials_read": false,
+    "old_baidu_validation_secrets_read": false,
+    "real_upstream_credentials_used": false,
+    "runtime_secret_material_in_project_evidence": false,
+    "os_lock_setting_changed": false
+  },
+  "git": {
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "historical_before_fix_artifacts": [
+    "sandbox-diagnostic-before-fix.json",
+    "app-fault-before-supervisor.json",
+    "local-identity-source.json"
+  ]
+}

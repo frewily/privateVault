@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "status": "OWNER_MANUAL_VISIBLE_SCENARIOS_PASS",
+  "feedback": {
+    "date": "2026-11-01",
+    "evidence_type": "user_reported_manual_use",
+    "user_quote": "全都成功了，还有下次安装包别整这么大，针对我手机出一个安装包就行了",
+    "device_context": "OnePlus Ace 5 Ultra / Android16, as previously user-reported; not queried",
+    "cases": [
+      {
+        "name": "first startup and verified sample visible",
+        "status": "user_reported_pass"
+      },
+      {
+        "name": "three complete stop/start cycles",
+        "status": "user_reported_pass"
+      },
+      {
+        "name": "background return and restart/read",
+        "status": "user_reported_pass"
+      }
+    ],
+    "assistant_device_access": false,
+    "installed_device_artifact_hash_independently_checked": false,
+    "uncovered": [
+      "startup cancellation",
+      "Binder death",
+      "core/main process unexpected exit",
+      "orphan process checks",
+      "error recovery",
+      "actual kernel page size"
+    ]
+  },
+  "artifact_reference": {
+    "path": "/Users/frewily/projects/privateVault/.local/w01-a/PrivateVault-W01-A-arm64-debug-1c9b6467.apk",
+    "bytes": 144463149,
+    "sha256": "1c9b646725f8bdc262c1fb9896449c874c810b25a6ded48b5aa5b8b03b335f20",
+    "actual_packaged_abis": [
+      "arm64-v8a"
+    ],
+    "largest_zip_entries": [
+      {
+        "name": "lib/arm64-v8a/libgojni.so",
+        "stored_bytes": 65952144,
+        "uncompressed_bytes": 65952144
+      },
+      {
+        "name": "lib/arm64-v8a/libflutter.so",
+        "stored_bytes": 38828704,
+        "uncompressed_bytes": 38828704
+      },
+      {
+        "name": "lib/arm64-v8a/libVkLayer_khronos_validation.so",
+        "stored_bytes": 15240080,
+        "uncompressed_bytes": 15240080
+      },
+      {
+        "name": "assets/flutter_assets/kernel_blob.bin",
+        "stored_bytes": 14908069,
+        "uncompressed_bytes": 43570384
+      },
+      {
+        "name": "assets/flutter_assets/isolate_snapshot_data",
+        "stored_bytes": 4405721,
+        "uncompressed_bytes": 11647016
+      },
+      {
+        "name": "classes.dex",
+        "stored_bytes": 4199421,
+        "uncompressed_bytes": 10660820
+      },
+      {
+        "name": "assets/flutter_assets/fonts/MaterialIcons-Regular.otf",
+        "stored_bytes": 593046,
+        "uncompressed_bytes": 1645184
+      },
+      {
+        "name": "assets/flutter_assets/NOTICES.Z",
+        "stored_bytes": 96643,
+        "uncompressed_bytes": 98646
+      },
+      {
+        "name": "resources.arsc",
+        "stored_bytes": 58216,
+        "uncompressed_bytes": 58216
+      },
+      {
+        "name": "classes5.dex",
+        "stored_bytes": 24808,
+        "uncompressed_bytes": 51104
+      },
+      {
+        "name": "assets/flutter_assets/assets/w01_sample.png",
+        "stored_bytes": 14415,
+        "uncompressed_bytes": 14415
+      },
+      {
+        "name": "classes3.dex",
+        "stored_bytes": 11748,
+        "uncompressed_bytes": 35976
+      },
+      {
+        "name": "classes2.dex",
+        "stored_bytes": 7910,
+        "uncompressed_bytes": 16920
+      },
+      {
+        "name": "assets/flutter_assets/shaders/ink_sparkle.frag",
+        "stored_bytes": 6183,
+        "uncompressed_bytes": 21856
+      }
+    ]
+  },
+  "next_delivery_policy": {
+    "target_device": "current owner phone",
+    "abi": "arm64-v8a only",
+    "delivery_count": 1,
+    "preferred_build": "regression-verified release or equivalent size-optimized build",
+    "debug_delivery": "only when explicitly needed for diagnostics, with size explained",
+    "keep_package_and_update_certificate_compatible": true,
+    "measure_size_before_delivery": true,
+    "specific_size_not_promised": true,
+    "current_debug_build_entry_is_not_yet_an_optimized_release_entry": true
+  },
+  "this_turn_actions": {
+    "new_build": false,
+    "new_download": false,
+    "adb_usb_device_access": false,
+    "git_writes": false
+  },
+  "source_sha256": {
+    "AGENTS.md": "1e691379ff9b2e7dd6b7b4446929a36b1ebc91e29a3593a37b21d7a974ea26cd",
+    "toolchains/w01-android.json": "d38514ab1c62e1e2e0401936d216a5cb926cc8d8f6d588cb24e373661cd86191",
+    "apps/privatevault/android/app/build.gradle.kts": "6c45e5bf951b6b54e4802d18b1c623d0115cdc902e4cd94a6078cfb34ecae5e1"
+  }
+}

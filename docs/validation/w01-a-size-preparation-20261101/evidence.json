@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "status": "SIZE_CONFIGURATION_PREPARED_NO_RELEASE_APK_OWNER_REINSTALL_NOT_REQUESTED",
+  "owner_steering": "Retain previous successful manual checks; combine APK optimization with a future feature delivery, not a separate old-feature reinstall.",
+  "implementation": {
+    "build_default": "release candidate",
+    "debug_argument": "debug",
+    "abi": "arm64-v8a",
+    "candidate_version_code": 2,
+    "candidate_version_name": "0.1.0-w01a.2",
+    "native_packaging": "deflate plus installer extraction; ELF 16KB remains required",
+    "signing": "existing W01 local development certificate",
+    "business_and_core_sources_changed": false
+  },
+  "checks": {
+    "release_assemble": "FAILED offline: com.android.tools.lint:lint-gradle:32.1.0 missing; no lint bypass",
+    "release_apk": "NOT GENERATED",
+    "release_size": "UNMEASURED",
+    "release_jni_dex_alignment_signature_checks": "NOT RUN; no release APK",
+    "debug_apk_static_regression": {
+      "schema_version": 2,
+      "scope": "APK static inspection only; no installation/device/JNI runtime test",
+      "apk": "/Users/frewily/projects/privateVault/.local/w01-a/PrivateVault-W01-A-arm64-debug-1c9b6467.apk",
+      "bytes": 144463149,
+      "sha256": "1c9b646725f8bdc262c1fb9896449c874c810b25a6ded48b5aa5b8b03b335f20",
+      "package": "dev.privatevault.w01",
+      "version_code": "1",
+      "version_name": "0.1.0-w01a",
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "abi": "arm64-v8a",
+      "permissions": [
+        "android.permission.INTERNET",
+        "dev.privatevault.w01.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "build_mode": "debug",
+      "debuggable": true,
+      "extract_native_libs": false,
+      "backup_and_device_transfer_exclusions_verified": true,
+      "certificate_sha256": "b742c39a2b3e4be2662ccd2e9bea874d3b7501aac3e984b7ecc0e650bd46db53",
+      "signature_verified": true,
+      "zipalign_16kb_command_passed": true,
+      "native_zip_16kb_alignment": "verified",
+      "core_build_id": "pv-w01a-eb7fff012b4d24b9",
+      "native_libraries": [
+        {
+          "name": "lib/arm64-v8a/libVkLayer_khronos_validation.so",
+          "bytes": 15240080,
+          "sha256": "ae445f7e74d402e3a367adb230b1edd9841899fcb3310166e5cc96a09ad37a3f",
+          "compressed_bytes": 15240080,
+          "compression": "stored",
+          "zip_data_offset": 4259840,
+          "elf_load_alignments": [
+            65536,
+            65536,
+            65536
+          ]
+        },
+        {
+          "name": "lib/arm64-v8a/libflutter.so",
+          "bytes": 38828704,
+          "sha256": "047acc6348bb5094466b42c3b060d9c9ae18c5a55c7191567f5ed6d4599ef0c5",
+          "compressed_bytes": 38828704,
+          "compression": "stored",
+          "zip_data_offset": 19513344,
+          "elf_load_alignments": [
+            65536,
+            65536,
+            65536
+          ]
+        },
+        {
+          "name": "lib/arm64-v8a/libgojni.so",
+          "bytes": 65952144,
+          "sha256": "5222a7c0a127715f3d8728ca2dd45090a3b4d37d7a5ee46eedf474abc35329dc",
+          "compressed_bytes": 65952144,
+          "compression": "stored",
+          "zip_data_offset": 58343424,
+          "elf_load_alignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ]
+        }
+      ],
+      "post_r8_jni_classes": [],
+      "largest_entries": [
+        {
+          "name": "lib/arm64-v8a/libgojni.so",
+          "bytes": 65952144,
+          "compressed_bytes": 65952144
+        },
+        {
+          "name": "lib/arm64-v8a/libflutter.so",
+          "bytes": 38828704,
+          "compressed_bytes": 38828704
+        },
+        {
+          "name": "lib/arm64-v8a/libVkLayer_khronos_validation.so",
+          "bytes": 15240080,
+          "compressed_bytes": 15240080
+        },
+        {
+          "name": "assets/flutter_assets/kernel_blob.bin",
+          "bytes": 43570384,
+          "compressed_bytes": 14908069
+        },
+        {
+          "name": "assets/flutter_assets/isolate_snapshot_data",
+          "bytes": 11647016,
+          "compressed_bytes": 4405721
+        },
+        {
+          "name": "classes.dex",
+          "bytes": 10660820,
+          "compressed_bytes": 4199421
+        },
+        {
+          "name": "assets/flutter_assets/fonts/MaterialIcons-Regular.otf",
+          "bytes": 1645184,
+          "compressed_bytes": 593046
+        },
+        {
+          "name": "assets/flutter_assets/NOTICES.Z",
+          "bytes": 98646,
+          "compressed_bytes": 96643
+        },
+        {
+          "name": "resources.arsc",
+          "bytes": 58216,
+          "compressed_bytes": 58216
+        },
+        {
+          "name": "classes5.dex",
+          "bytes": 51104,
+          "compressed_bytes": 24808
+        },
+        {
+          "name": "assets/flutter_assets/assets/w01_sample.png",
+          "bytes": 14415,
+          "compressed_bytes": 14415
+        },
+        {
+          "name": "classes3.dex",
+          "bytes": 35976,
+          "compressed_bytes": 11748
+        }
+      ],
+      "cleartext_exception": "127.0.0.1 only",
+      "core_service_exported": false,
+      "core_service_process": ":pv_core"
+    },
+    "debug_mislabelled_release": "REJECTED as intended",
+    "pinned_flutter_plugin_generator": "PASS debug includes integration_test; release excludes it",
+    "shell_and_python_syntax": "PASS",
+    "dart_mac_and_phone_functional_tests": "NOT RERUN; prior evidence retained"
+  },
+  "downloads": {
+    "artifacts": [
+      {
+        "url": "https://storage.googleapis.com/download.flutter.io/io/flutter/flutter_embedding_release/1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded/flutter_embedding_release-1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded.pom",
+        "bytes": 2544,
+        "sha1": "49fdd892c0c4f586d77b6f35bc6d1f3e31aee120",
+        "sha256": "8055c5651b7b7bb665b15af913117bfd64aadb708199d0a373425519c246d7d9"
+      },
+      {
+        "url": "https://storage.googleapis.com/download.flutter.io/io/flutter/flutter_embedding_release/1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded/flutter_embedding_release-1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded.jar",
+        "bytes": 1584072,
+        "sha1": "a0afed803af1a7f8f85f17db4010e34435b93783",
+        "sha256": "9840667c962c23a4144bbd17193852c75c17d4e8cbc14e1bc7ac4a31e6fd385a"
+      },
+      {
+        "url": "https://storage.googleapis.com/download.flutter.io/io/flutter/arm64_v8a_release/1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded/arm64_v8a_release-1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded.pom",
+        "bytes": 510,
+        "sha1": "495f00a391da0b2e1e9caa7fad6a00cbaa1cddf0",
+        "sha256": "fbbfbbd3d750e906563e0f143b36f892f341337f4f1083e98a6240dbb3fb5a57"
+      },
+      {
+        "url": "https://storage.googleapis.com/download.flutter.io/io/flutter/arm64_v8a_release/1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded/arm64_v8a_release-1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded.jar",
+        "bytes": 42168248,
+        "sha1": "955faf7ff0953eee876acea5dc17759e1d4481c6",
+        "sha256": "2d23896abc7358793a0b7586f95c1699a7507d33b7b55c50ca19537033420a94"
+      }
+    ],
+    "ledger": {
+      "schema_version": 1,
+      "limit_bytes": 3154116608,
+      "owner_allowance_bytes": 3221225472,
+      "accounted_bytes": 1425884593,
+      "measurement": "upstream encrypted received and sent bytes; 64MiB reserve",
+      "hosts": {
+        "go.dev": 6676,
+        "dl.google.com": 216291449,
+        "codeload.github.com": 1923522,
+        "services.gradle.org": 12878,
+        "github.com": 17456,
+        "release-assets.githubusercontent.com": 137231526,
+        "proxy.golang.org": 151352561,
+        "sum.golang.org": 16469430,
+        "storage.googleapis.com": 642692277,
+        "plugins.gradle.org": 185423,
+        "plugins-artifacts.gradle.org": 24560073,
+        "repo.maven.apache.org": 235141322
+      },
+      "grants": [
+        {
+          "id": "initial-1GiB",
+          "bytes": 1073741824
+        },
+        {
+          "id": "20261101-extra-2GiB",
+          "bytes": 2147483648,
+          "starting_accounted_bytes": 1006632960,
+          "authorization": "explicit user reply: allow up to 2GiB additional downloads"
+        }
+      ],
+      "previous_ledger_sha256": "38194d7574e86664a53f987707e0280311c72f88f392390ce01e8b12e8a14f73"
+    },
+    "starting_accounted_bytes": 1381381555,
+    "new_accounted_bytes": 44503038,
+    "gateway_remaining_bytes": 1728232015,
+    "gateway_stopped": true,
+    "not_carrier_billing": true
+  },
+  "cleanup": {
+    "build_and_check_commands_completed": true,
+    "gateway_pid": 51958,
+    "gateway_pid_present": false,
+    "identified_project_mac_app_core_processes": [],
+    "no_mac_app_core_launched_this_batch": true
+  },
+  "next_package": {
+    "proposal": "docs/design/32-W02本地库配置与秘密边界实施提案-v0.1.md",
+    "status": "DESIGN_ONLY_NOT_IMPLEMENTED"
+  },
+  "operations_not_performed": [
+    "phone install/adb/USB",
+    "real accounts/cloud/personal media",
+    "Git stage/commit/push/PR/release",
+    "W02 business implementation or secret-store writes"
+  ],
+  "source_sha256": {
+    "AGENTS.md": "6a3cb44f961b8706952c2d8e48c54c079078266920a5ad7094685fe5316ca41d",
+    "README.md": "bd3585c382ddb010af08b00e6e5ff344cf9bfcf24ee3a1e2b09aa2fc15d88185",
+    "apps/privatevault/android/app/build.gradle.kts": "d723790ac9aedf98e073c20c683f83bd3c7152211017304e38f2123e09ac9bbb",
+    "apps/privatevault/android/app/proguard-rules.pro": "9a8379eff67f59eb5d2b28f9779eef99f2becc83ab9aa233cd022d43f406ce81",
+    "apps/privatevault/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java": "462f4a19778f3fe486674c6ab64b62f555095bddb6dfb6690a1d63ad92ef0f54",
+    "tools/build_w01_android_apk.sh": "46e975bc56d2f57940166b6b36a8629e28cd5815085e2564a03e43a399451600",
+    "tools/check_w01_android_unit.sh": "7c5fd269f15bfb4416d2a4e5a4c445a5324d83f2f4029e3f13a6841099ce181b",
+    "tools/check_w01_android_apk.py": "0a35798cb1efa461ce4d6766892b789b18ea5cf86ff3daa3e869e06a4b79614b",
+    "tools/generate_w01_android_plugins.dart": "6cbc5de94680a761c837a2faef4e93e751e66def2e3c6ab94821b3e8a5a86271",
+    "toolchains/w01-android.json": "050ae7e604751b94409b185a0d624ee114ee6bdbe47a79c14a49d9fb9a2305e1",
+    "docs/development/开发交接记录.md": "90dd18807234e55958870fececde1eb31c3fe6736c6b5e5b83bf9d28e93814e4",
+    "docs/development/W01-A运行说明.md": "d6d417aafda7ba907d0795ae6e3b2f96c71282fbe3efb5f0c2605f90230f5bad",
+    "docs/development/W01-A-APK安装与验收说明.md": "ca415c8584c2758dee87d9a7fc152920f983f40e7bf2c30f314b00b801a3d588",
+    "docs/validation/31-W01-A包体优化准备与推进调整-v0.1.md": "6413a905398d6a52f7eb5cc0feff02d5fc83a8f0920192dc2fd6974d71aeb57b",
+    "docs/design/32-W02本地库配置与秘密边界实施提案-v0.1.md": "e44c0ef7d67a0f87358f97eddfd178e9f57fac6b432515ee882d1106ed86fc3c"
+  },
+  "build_logs_sha256": {
+    "release-build-online.log": "bb05f51f5be6ec3feb6c34c01a3f34ff653e797f6c49522c1198b13302cff4f3",
+    "release-build-offline.log": "44b3b34f8becf999920ff312d4852dceff42be0822d211ef373c1bd0396e1904",
+    "release-build-final.log": "d445731c231a426fdab22339e5bc3e323ca8fbd4a7f3b30bbc8f27149e2ce959"
+  }
+}

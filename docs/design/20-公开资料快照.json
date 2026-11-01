@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-28",
+  "purpose": "Read-only architecture option research; no installation/build/runtime validation",
+  "sources": [
+    {
+      "name": "flutter",
+      "repository": "flutter/flutter",
+      "path": "README.md",
+      "commit": "087a1b62b8996c328f12708c46ca060dba5fdf1d",
+      "blob_sha": "b9e6bc763380cabef9330c92478816ff79dbcae7",
+      "url": "https://github.com/flutter/flutter/blob/087a1b62b8996c328f12708c46ca060dba5fdf1d/README.md",
+      "read_date": "2026-10-28",
+      "runtime_tested_in_privatevault": false
+    },
+    {
+      "name": "video_player",
+      "repository": "flutter/packages",
+      "path": "packages/video_player/video_player/README.md",
+      "commit": "13d38e0d97a8e1227379f2887847bc178f22c73a",
+      "blob_sha": "5460788bea7d2f0b92a8a8e9b6e1ce42f282a6bd",
+      "url": "https://github.com/flutter/packages/blob/13d38e0d97a8e1227379f2887847bc178f22c73a/packages/video_player/video_player/README.md",
+      "read_date": "2026-10-28",
+      "runtime_tested_in_privatevault": false
+    },
+    {
+      "name": "media_kit",
+      "repository": "media-kit/media-kit",
+      "path": "README.md",
+      "commit": "c533e446755f51cf53c7e57aea873f2aa5355f81",
+      "blob_sha": "506240fd7a74891ba0798b12e10cbf8b16edf684",
+      "url": "https://github.com/media-kit/media-kit/blob/c533e446755f51cf53c7e57aea873f2aa5355f81/README.md",
+      "read_date": "2026-10-28",
+      "runtime_tested_in_privatevault": false
+    },
+    {
+      "name": "secure_storage",
+      "repository": "juliansteenbakker/flutter_secure_storage",
+      "path": "README.md",
+      "commit": "e8eeb449cd512b26153f0a3376dfe374dd39a999",
+      "blob_sha": "457f74e2f3ea00d4e7e31ff2c758d079d8346354",
+      "url": "https://github.com/juliansteenbakker/flutter_secure_storage/blob/e8eeb449cd512b26153f0a3376dfe374dd39a999/README.md",
+      "read_date": "2026-10-28",
+      "runtime_tested_in_privatevault": false
+    },
+    {
+      "name": "age",
+      "repository": "FiloSottile/age",
+      "path": "README.md",
+      "commit": "b74dce4cdbe35b5e5f66c06d9612b72f89028758",
+      "blob_sha": "0cf6abb437fd4d6bb41d1147f05c247bde627fc9",
+      "url": "https://github.com/FiloSottile/age/blob/b74dce4cdbe35b5e5f66c06d9612b72f89028758/README.md",
+      "read_date": "2026-10-28",
+      "runtime_tested_in_privatevault": false
+    }
+  ]
+}

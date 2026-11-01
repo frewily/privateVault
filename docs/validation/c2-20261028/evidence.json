@@ -1,0 +1,88 @@
+{
+  "observed_date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "phone_user_report": "完成了，能正常显示，名称和你规定的一样，文件同样是样本.png",
+  "phone_app_version_reported": "v4.2.5.26080717 (150)",
+  "phone_os_reported": "Android 16",
+  "mac_core_version": "v4.2.8",
+  "mac_core_commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+  "package_preflight": {
+    "official_archive_sha256": "c845f509d784a936ce53610c5643cedd05223e42ceb63fce5ad1bacbca1bbcd7",
+    "core_binary_sha256": "f8ced5c3e34de944ddbfc187181b9666cfa076f02281d38e301dc56eaa82933e",
+    "binary_matches_verified_official_archive": true,
+    "strict_signature_passed": true
+  },
+  "mac_runtime_observations": {
+    "status": "passed",
+    "target": "/crypt-test/Android-C2-20261028-01/样本.png",
+    "logical_directory": [
+      {
+        "name": "样本.png",
+        "bytes": 9763,
+        "is_directory": false
+      }
+    ],
+    "readback": {
+      "http_status": 200,
+      "bytes": 9763,
+      "content_length": "9763",
+      "sha256": "6e1b4f47442ab497a6beaff1226cad96d08a0d34f78015b53393649db1066f30",
+      "matches_expected": true,
+      "application_full_readbacks": 1,
+      "seconds": 3.5921
+    },
+    "cipher_observation": {
+      "directory": "17h1p0acko9dhb7imfqpr172nugg94s98kpaq8akmuhahivt0ohg",
+      "file": "3o2acgbmom15k3iq3ap92j0um8",
+      "bytes": 9811,
+      "identified_against_prior_b2_directory_manifest": true,
+      "names_are_base32_ciphertext": true,
+      "new_raw_directory_count": 1,
+      "new_media_object_count": 1,
+      "header_read_performed": false
+    },
+    "child_exit_codes": {
+      "core": 0,
+      "relay": 0
+    },
+    "b2_ledger_unchanged": true,
+    "tunnel_ledger": {
+      "upstream_bytes": 18546,
+      "downstream_bytes": 46993,
+      "budget_limit_hit": false,
+      "range_limit_hit": false
+    },
+    "tunnel_byte_budget": 33554432,
+    "provider_recovery": {
+      "provider_created": true,
+      "current_state_preserved_privately": true,
+      "refresh_value_changed_from_seed": false,
+      "old_seed_must_not_be_reimported": true,
+      "credential_values_printed": false
+    },
+    "ports_released": true,
+    "resource_before": {
+      "workspace_bytes": 289069041,
+      "system_free_bytes": 250209570816
+    },
+    "resource_after": {
+      "workspace_bytes": 289086812,
+      "system_free_bytes": 250209615872
+    },
+    "test_config_restored": true,
+    "cleanup_passed": true,
+    "secret_values_printed": false,
+    "cloud_file_write_operations_by_verifier": 0
+  },
+  "network_total_bytes": 65539,
+  "limits": [
+    "One synthetic PNG; not a whole-library audit",
+    "Phone upload/preview are user reports; Mac readback/hash are observed runtime results",
+    "No credential-expiry, lifecycle, offline, source-site, or Windows test",
+    "C2 tunnel counters exclude DNS, loopback and TCP/IP headers",
+    "No separate ciphertext header read; ciphertext path/size plus successful Crypt decoding checked"
+  ],
+  "test_objects_retained": true,
+  "b2_archived_counter_rechecked_unchanged": true,
+  "business_implementation_started": false
+}

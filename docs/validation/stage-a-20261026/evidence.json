@@ -1,0 +1,534 @@
+{
+  "core-version": {
+    "Built At": "2026-10-24 10:40:47 +0000",
+    "Go Version": "go1.27.3 darwin/arm64",
+    "Commit ID": "25e4eb6",
+    "Version": "v4.2.8",
+    "WebVersion": "v4.2.8"
+  },
+  "core-signature": {
+    "exit_code": 0,
+    "diagnostic": ""
+  },
+  "initialization": {
+    "initialized": true,
+    "storages_before_setup": 0,
+    "guest_scope": "read-only synthetic sample mounts in loopback-only isolated instance",
+    "external_preview_assets_replaced": true,
+    "existing_app_config_used": false
+  },
+  "fixtures": {
+    "generated_internally": true,
+    "total_bytes": 45822076,
+    "files": [
+      {
+        "name": "sample.png",
+        "bytes": 9763,
+        "sha256": "6e1b4f47442ab497a6beaff1226cad96d08a0d34f78015b53393649db1066f30",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "png",
+              "codec_type": "video",
+              "width": 256,
+              "height": 256
+            }
+          ],
+          "format": {
+            "size": "9763"
+          }
+        }
+      },
+      {
+        "name": "sample.wav",
+        "bytes": 960078,
+        "sha256": "d9f19abdb1241a1d55108f7c8c45ab7bfa2452b59e2427dfb1b5dac94beff1e5",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "pcm_s16le",
+              "codec_type": "audio",
+              "sample_rate": "48000"
+            }
+          ],
+          "format": {
+            "duration": "10.000000",
+            "size": "960078"
+          }
+        }
+      },
+      {
+        "name": "sample.mp4",
+        "bytes": 44852235,
+        "sha256": "cd5603de378fa45fe453ca8bec0ffe940425d97c2aefabaea7b279b90be3c1cd",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 640,
+              "height": 360
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "sample_rate": "48000"
+            }
+          ],
+          "format": {
+            "duration": "45.000000",
+            "size": "44852235"
+          }
+        }
+      }
+    ]
+  },
+  "mounts": {
+    "mounts": [
+      {
+        "path": "/plain",
+        "driver": "Local"
+      },
+      {
+        "path": "/cipher-raw",
+        "driver": "Local"
+      },
+      {
+        "path": "/crypt",
+        "driver": "Crypt"
+      }
+    ],
+    "only_local_drivers": true,
+    "cloud_mounts": 0,
+    "crypt_profile": {
+      "filename_encryption": "standard",
+      "directory_name_encryption": true,
+      "filename_encoding": "base32"
+    }
+  },
+  "basic-readback": [
+    {
+      "mode": "plain",
+      "fixture": "sample.png",
+      "upload_seconds": 0.0017,
+      "readback": {
+        "http_status": 200,
+        "bytes": 9763,
+        "sha256": "6e1b4f47442ab497a6beaff1226cad96d08a0d34f78015b53393649db1066f30",
+        "content_length": "9763",
+        "seconds": 0.0001
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "fixture": "sample.wav",
+      "upload_seconds": 0.0013,
+      "readback": {
+        "http_status": 200,
+        "bytes": 960078,
+        "sha256": "d9f19abdb1241a1d55108f7c8c45ab7bfa2452b59e2427dfb1b5dac94beff1e5",
+        "content_length": "960078",
+        "seconds": 0.0011
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "fixture": "sample.mp4",
+      "upload_seconds": 0.0298,
+      "readback": {
+        "http_status": 200,
+        "bytes": 44852235,
+        "sha256": "cd5603de378fa45fe453ca8bec0ffe940425d97c2aefabaea7b279b90be3c1cd",
+        "content_length": "44852235",
+        "seconds": 0.0214
+      },
+      "passed": true
+    },
+    {
+      "mode": "crypt",
+      "fixture": "sample.png",
+      "upload_seconds": 0.0034,
+      "readback": {
+        "http_status": 200,
+        "bytes": 9763,
+        "sha256": "6e1b4f47442ab497a6beaff1226cad96d08a0d34f78015b53393649db1066f30",
+        "content_length": "9763",
+        "seconds": 0.0001
+      },
+      "passed": true
+    },
+    {
+      "mode": "crypt",
+      "fixture": "sample.wav",
+      "upload_seconds": 0.0032,
+      "readback": {
+        "http_status": 200,
+        "bytes": 960078,
+        "sha256": "d9f19abdb1241a1d55108f7c8c45ab7bfa2452b59e2427dfb1b5dac94beff1e5",
+        "content_length": "960078",
+        "seconds": 0.0019
+      },
+      "passed": true
+    },
+    {
+      "mode": "crypt",
+      "fixture": "sample.mp4",
+      "upload_seconds": 0.0916,
+      "readback": {
+        "http_status": 200,
+        "bytes": 44852235,
+        "sha256": "cd5603de378fa45fe453ca8bec0ffe940425d97c2aefabaea7b279b90be3c1cd",
+        "content_length": "44852235",
+        "seconds": 0.0817
+      },
+      "passed": true
+    }
+  ],
+  "ranges": {
+    "plain": [
+      {
+        "case": "first",
+        "status": 206,
+        "content_range": "bytes 0-65535/44852235",
+        "bytes": 65536,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0015
+      },
+      {
+        "case": "cross-block",
+        "status": 206,
+        "content_range": "bytes 65535-65536/44852235",
+        "bytes": 2,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0002
+      },
+      {
+        "case": "middle",
+        "status": 206,
+        "content_range": "bytes 22426117-22458884/44852235",
+        "bytes": 32768,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0002
+      },
+      {
+        "case": "tail",
+        "status": 206,
+        "content_range": "bytes 44786699-44852234/44852235",
+        "bytes": 65536,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0002
+      },
+      {
+        "case": "suffix",
+        "status": 206,
+        "content_range": "bytes 44851735-44852234/44852235",
+        "bytes": 500,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0002
+      },
+      {
+        "case": "open-ended",
+        "status": 206,
+        "content_range": "bytes 44851735-44852234/44852235",
+        "bytes": 500,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0002
+      },
+      {
+        "case": "invalid",
+        "status": 416,
+        "content_range": "bytes */44852235",
+        "passed": true
+      }
+    ],
+    "crypt": [
+      {
+        "case": "first",
+        "status": 206,
+        "content_range": "bytes 0-65535/44852235",
+        "bytes": 65536,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0005
+      },
+      {
+        "case": "cross-block",
+        "status": 206,
+        "content_range": "bytes 65535-65536/44852235",
+        "bytes": 2,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0004
+      },
+      {
+        "case": "middle",
+        "status": 206,
+        "content_range": "bytes 22426117-22458884/44852235",
+        "bytes": 32768,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0003
+      },
+      {
+        "case": "tail",
+        "status": 206,
+        "content_range": "bytes 44786699-44852234/44852235",
+        "bytes": 65536,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0003
+      },
+      {
+        "case": "suffix",
+        "status": 206,
+        "content_range": "bytes 44851735-44852234/44852235",
+        "bytes": 500,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0005
+      },
+      {
+        "case": "open-ended",
+        "status": 206,
+        "content_range": "bytes 44851735-44852234/44852235",
+        "bytes": 500,
+        "matches_original": true,
+        "passed": true,
+        "seconds": 0.0002
+      },
+      {
+        "case": "invalid",
+        "status": 416,
+        "content_range": "bytes */44852235",
+        "passed": true
+      }
+    ]
+  },
+  "cipher-observation": [
+    {
+      "name": "379qf8209bc5vohs6i2gmvd95g/t1hhcbis9eglh842e2abmgmjpc",
+      "bytes": 44863227,
+      "rclone_magic": true,
+      "plaintext_name_visible": false
+    },
+    {
+      "name": "379qf8209bc5vohs6i2gmvd95g/hv9mnfcgrgein2puagk5e281sc",
+      "bytes": 9811,
+      "rclone_magic": true,
+      "plaintext_name_visible": false
+    },
+    {
+      "name": "379qf8209bc5vohs6i2gmvd95g/hkv8ps7lj7dml5rkh2ovh14a1k",
+      "bytes": 960350,
+      "rclone_magic": true,
+      "plaintext_name_visible": false
+    }
+  ],
+  "resource-snapshot": {
+    "workspace_bytes": 486827406,
+    "budget_bytes": 2147483648
+  },
+  "interruption": {
+    "planned_source_bytes": 44852235,
+    "http_success": false,
+    "exception": "BrokenPipeError",
+    "bytes_sent": 2752512,
+    "partial_file_exists": true,
+    "partial_file_bytes": 2686976
+  },
+  "interruption-after-restart": {
+    "after_core_restart": true,
+    "listed_as_file": true,
+    "listed_bytes": 2686976,
+    "planned_complete_bytes": 44852235,
+    "partial_readback": {
+      "http_status": 200,
+      "bytes": 2686976,
+      "sha256": "41fa6d5a3b54c21ca69525e5cdd05d5e4906315cdf0136d8762df652020b4e2d",
+      "content_length": "2686976",
+      "seconds": 0.0023
+    },
+    "is_complete_source": false
+  },
+  "retry": {
+    "readback": {
+      "http_status": 200,
+      "bytes": 44852235,
+      "sha256": "cd5603de378fa45fe453ca8bec0ffe940425d97c2aefabaea7b279b90be3c1cd",
+      "content_length": "44852235",
+      "seconds": 0.0192
+    },
+    "matches_original": true,
+    "byte_resume_claimed": false
+  },
+  "crypt-after-restart": {
+    "readback": {
+      "http_status": 200,
+      "bytes": 44852235,
+      "sha256": "cd5603de378fa45fe453ca8bec0ffe940425d97c2aefabaea7b279b90be3c1cd",
+      "content_length": "44852235",
+      "seconds": 0.0803
+    },
+    "matches_original": true
+  },
+  "browser-crypt": {
+    "browser": "ChatGPT in-app browser (macOS)",
+    "image": {
+      "loaded": true,
+      "width": 256,
+      "height": 256,
+      "source": "/p/crypt/媒体/样本.png"
+    },
+    "audio": {
+      "ui_start": "00:00 / 00:10",
+      "ui_later": "00:06 / 00:10",
+      "fixture_is_silent": true,
+      "detached_audio_element_not_observed": true
+    },
+    "video": {
+      "before_seek": {
+        "currentTime": 11.145282,
+        "duration": 45,
+        "error": null,
+        "height": 360,
+        "paused": false,
+        "readyState": 4,
+        "source": "http://127.0.0.1:15244/p/crypt/%E5%AA%92%E4%BD%93/%E6%A0%B7%E6%9C%AC.mp4",
+        "width": 640
+      },
+      "after_seek": {
+        "currentTime": 35.740036,
+        "duration": 45,
+        "error": null,
+        "height": 360,
+        "paused": false,
+        "readyState": 4,
+        "source": "http://127.0.0.1:15244/p/crypt/%E5%AA%92%E4%BD%93/%E6%A0%B7%E6%9C%AC.mp4",
+        "width": 640
+      },
+      "continued": {
+        "currentTime": 45,
+        "duration": 45,
+        "ended": true,
+        "error": null,
+        "paused": true,
+        "readyState": 4
+      }
+    },
+    "limits": [
+      "No audible-output test because fixtures are silent",
+      "Local storage only; no cloud traffic or cold-cache measurement"
+    ]
+  },
+  "browser-plain": {
+    "browser": "ChatGPT in-app browser (macOS)",
+    "image": {
+      "loaded": true,
+      "width": 256,
+      "height": 256,
+      "source": "/p/plain/媒体/样本.png"
+    },
+    "audio": {
+      "ui_start": "00:00 / 00:10",
+      "ui_later": "00:08 / 00:10",
+      "fixture_is_silent": true
+    },
+    "video": {
+      "start": {
+        "currentTime": 0.02155,
+        "duration": 45,
+        "error": null,
+        "height": 360,
+        "paused": false,
+        "readyState": 4,
+        "width": 640
+      },
+      "before_seek": {
+        "currentTime": 8.103377,
+        "duration": 45,
+        "error": null,
+        "paused": false,
+        "readyState": 4
+      },
+      "after_seek": {
+        "currentTime": 35.726208,
+        "duration": 45,
+        "error": null,
+        "paused": false,
+        "readyState": 4
+      },
+      "continued": {
+        "currentTime": 45,
+        "duration": 45,
+        "ended": true,
+        "error": null,
+        "paused": true,
+        "readyState": 4
+      }
+    }
+  },
+  "final-resource-snapshot": {
+    "workspace_bytes": 624332147,
+    "budget_bytes": 2147483648,
+    "system_free_bytes": 254600413184,
+    "minimum_free_bytes": 16106127360,
+    "directory_bytes": {
+      "package": 257263467,
+      "core-data": 277607,
+      "work": 90727226,
+      "fixtures": 45822076,
+      "cipher": 45833388,
+      "readback": 184035598,
+      "private": 94989,
+      "logs": 22705,
+      "evidence": 255091
+    },
+    "sampling": "end of functional tests, not continuous peak measurement",
+    "temporary_root_mode": "0o700",
+    "private_file_modes": {
+      "secrets": "0o600",
+      "api_state": "0o600"
+    },
+    "drivers_after_restart": [
+      "Local",
+      "Local",
+      "Crypt"
+    ],
+    "http_address": "127.0.0.1",
+    "http_port": 15244,
+    "enabled_extra_services": []
+  },
+  "package": {
+    "official_release": "https://github.com/OpenListTeam/OpenList/releases/tag/v4.2.8",
+    "asset": "openlist-darwin-arm64.tar.gz",
+    "bytes": 51573965,
+    "sha256": "c845f509d784a936ce53610c5643cedd05223e42ceb63fce5ad1bacbca1bbcd7",
+    "digest_verified_before_execution": true
+  },
+  "closeout": {
+    "recorded_at": "2026-10-26T19:36:20.516373+08:00",
+    "core_exit_code": 0,
+    "server_stopped": true,
+    "port_15244_listener_present": false,
+    "listener_check_tool": "lsof -nP -iTCP:15244 -sTCP:LISTEN returned exit 1 with empty output",
+    "last_core_network_observation": "PID 35486 TCP 127.0.0.1:15244 LISTEN only",
+    "original_environment_credentials_read": false,
+    "cloud_operations": 0,
+    "stage_b_executed": false,
+    "temporary_workspace_retained": true
+  }
+}

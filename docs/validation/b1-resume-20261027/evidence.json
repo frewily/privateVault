@@ -1,0 +1,277 @@
+{
+  "preparation": {
+    "workspace": "/private/tmp/privatevault-b1-validation-20261027-6b1t9fv3",
+    "official_archive_sha256": "c845f509d784a936ce53610c5643cedd05223e42ceb63fce5ad1bacbca1bbcd7",
+    "binary_matches_archive": true,
+    "strict_signature_passed": true,
+    "fixture_bytes": 9763,
+    "fixture_sha256": "6e1b4f47442ab497a6beaff1226cad96d08a0d34f78015b53393649db1066f30",
+    "user_approved_cloud_root": "/PrivateVault-验证-20261027",
+    "maximum_media_objects": 2,
+    "cloud_file_operations_started": false
+  },
+  "resume-authorization": {
+    "user_statement": "可以的",
+    "scope": "apply local DNS candidate; verify existing targets; at most one additional plain upload, then one Crypt upload",
+    "new_authorization_requested": false,
+    "original_mount_access_authorized": false,
+    "cloud_deletion_authorized": false,
+    "ordinary_overwrite_authorized": false
+  },
+  "dns-candidate-definition": {
+    "active_core_policy_unchanged": true,
+    "candidate_only": true,
+    "added_rule": "allow only local mDNSResponder Unix socket",
+    "original_policy_sha256": "24fd6e313f996456266abe5df4cb1a0d3ddaea200975859300a722bb77cd3e83",
+    "candidate_policy_sha256": "1900fc47a5ea1b4d61172cebad97c53accca9242d7e8b36423f48b5aa78e179f",
+    "cloud_retry_performed": false
+  },
+  "dns-candidate-check": {
+    "dns_results": [
+      {
+        "host": "c5.pcs.baidu.com",
+        "resolved": true,
+        "address_count": 1
+      },
+      {
+        "host": "pan.baidu.com",
+        "resolved": true,
+        "address_count": 2
+      }
+    ],
+    "direct_connect_errno": 1,
+    "direct_external_connection_denied": true,
+    "credentials_used": false
+  },
+  "resume-root-check": {
+    "expected_test_structure_only": true,
+    "ordinary_target_exists": false,
+    "cloud_root": "/PrivateVault-验证-20261027",
+    "new_provider_created": false,
+    "old_seed_reimported": false
+  },
+  "upload-intent-plain": {
+    "mode": "plain",
+    "local_path": "/cloud-test/plain/媒体/样本.png",
+    "source_bytes": 9763,
+    "application_attempt": 1,
+    "overwrite": false
+  },
+  "upload-intent-plain-2": {
+    "mode": "plain",
+    "local_path": "/cloud-test/plain/媒体/样本.png",
+    "source_bytes": 9763,
+    "application_attempt": 2,
+    "overwrite": false
+  },
+  "upload-intent-crypt": {
+    "mode": "crypt",
+    "local_path": "/crypt-test/媒体/样本.png",
+    "source_bytes": 9763,
+    "application_attempt": 1,
+    "overwrite": false
+  },
+  "plain-result": {
+    "readback": {
+      "http_status": 200,
+      "bytes": 9763,
+      "sha256": "6e1b4f47442ab497a6beaff1226cad96d08a0d34f78015b53393649db1066f30",
+      "content_length": "9763"
+    },
+    "passed": true,
+    "application_upload_attempts_total": 2,
+    "additional_upload_performed": true,
+    "preexisting_target_verified_without_overwrite": false
+  },
+  "crypt-result": {
+    "readback": {
+      "http_status": 200,
+      "bytes": 9763,
+      "sha256": "6e1b4f47442ab497a6beaff1226cad96d08a0d34f78015b53393649db1066f30",
+      "content_length": "9763"
+    },
+    "passed": true,
+    "application_upload_attempts": 1,
+    "filename_encryption": "standard",
+    "directory_name_encryption": true,
+    "filename_encoding": "base32"
+  },
+  "cipher-observation": {
+    "encrypted_directory": "joecrpj1qe20un7so8i0pn347o",
+    "encrypted_file": "3o2acgbmom15k3iq3ap92j0um8",
+    "bytes": 9811,
+    "rclone_magic_matches": true,
+    "plaintext_names_visible": false,
+    "format_probe": {
+      "http_status": 206,
+      "bytes": 8,
+      "sha256": "64c0bbb5219406e8762869d5d04d1edd27eab427ddd326bc393c65beea75ec28",
+      "content_length": "8"
+    }
+  },
+  "completed": {
+    "cloud_root": "/PrivateVault-验证-20261027",
+    "plain_passed": true,
+    "crypt_passed": true,
+    "media_objects": 2,
+    "estimated_object_bytes_verified": 19574,
+    "cloud_deletion_performed": false,
+    "range_efficiency_claimed": false
+  },
+  "resume-resource-snapshot": {
+    "workspace_bytes": 151108340,
+    "system_free_bytes": 253132800000,
+    "workspace_budget_bytes": 2147483648,
+    "minimum_free_bytes": 16106127360,
+    "sampling": "end of resumed functional checks, not a continuous peak measurement",
+    "root_mode": "0o700",
+    "private_mode": "0o700",
+    "ordinary_upload_attempts_across_both_runs": 2,
+    "crypt_upload_attempts": 1
+  },
+  "provider-recovery-status": {
+    "provider_created": true,
+    "current_state_preserved_privately": true,
+    "refresh_value_changed_from_seed": false,
+    "old_seed_must_not_be_reimported": true,
+    "credential_values_printed": false
+  },
+  "process-exit": {
+    "relay": 0,
+    "core": 0
+  },
+  "relay-metrics": {
+    "accepted": 11,
+    "rejected": 0,
+    "connections": [
+      {
+        "host": "pan.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 1991,
+        "downstream_bytes": 7101,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "pan.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 16095,
+        "downstream_bytes": 24684,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "d.pcs.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 2322,
+        "downstream_bytes": 6513,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "c5.pcs.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 12285,
+        "downstream_bytes": 6639,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "d.pcs.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 2138,
+        "downstream_bytes": 7340,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "xafj-cu11.baidupcs.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 3129,
+        "downstream_bytes": 15616,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "pan.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 36904,
+        "downstream_bytes": 51260,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "d.pcs.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 2335,
+        "downstream_bytes": 6399,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "c5.pcs.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 12362,
+        "downstream_bytes": 6638,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "d.pcs.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 2194,
+        "downstream_bytes": 7129,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "bddwd-cu11.baidupcs.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 4588,
+        "downstream_bytes": 16443,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      }
+    ],
+    "upstream_bytes": 96343,
+    "downstream_bytes": 155762
+  },
+  "applied_policy": {
+    "sha256": "1900fc47a5ea1b4d61172cebad97c53accca9242d7e8b36423f48b5aa78e179f",
+    "local_system_dns_allowed": true,
+    "matches_prechecked_candidate": true,
+    "tls_skip_verification_configured": false,
+    "global_network_configuration_changed": false
+  },
+  "closeout": {
+    "recorded_at_utc": "2026-10-27T09:57:21.629653+00:00",
+    "core_and_relay_stopped": true,
+    "listener_on_ports_15245_15246": false,
+    "listener_check": "lsof returned exit 1 with empty output",
+    "cloud_deletion_performed": false,
+    "original_openlist_config_or_database_accessed": false,
+    "original_mount_login_state_verified": false,
+    "new_authorization_performed_for_resume": false,
+    "provider_seed_reimported": false,
+    "authoritative_provider_state_preserved_privately": true,
+    "encrypted_test_profile_preserved_privately": true,
+    "media_objects_intended_and_verified": 2,
+    "media_object_bytes": 19574,
+    "ordinary_application_upload_attempts_total": 2,
+    "ordinary_application_upload_attempts_this_resume": 1,
+    "crypt_application_upload_attempts_total": 1,
+    "video_audio_android_windows_or_cross_client_tests": false
+  },
+  "metrics_scope": "This resumed supervisor run only; TLS tunnel bytes with protocol and metadata overhead, not a precise TCP wire count or image payload count."
+}

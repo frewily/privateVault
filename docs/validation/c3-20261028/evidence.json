@@ -1,0 +1,36 @@
+{
+  "observed_date": "2026-10-28",
+  "evidence_type": "user_report_of_guided_android_media_playback",
+  "user_reply": "全部正常",
+  "device_reported": "一加 Ace 5 Ultra",
+  "android_version_reported": "16",
+  "app_version_reported": "v4.2.5.26080717 (150)",
+  "test_mount": "/PrivateVault-C1-Crypt",
+  "requested_samples": {
+    "audio": "媒体/样本.wav",
+    "video": "媒体/样本.mp4"
+  },
+  "requested_seek_targets_seconds": [
+    22,
+    40
+  ],
+  "reported_outcomes": {
+    "audio_playback_progress": true,
+    "video_playback_and_progress": true,
+    "middle_seek_and_continued_playback": true,
+    "tail_seek_and_continued_playback": true
+  },
+  "player_instruction": "builtin player first; report external player if used",
+  "actual_player_name_separately_reported": null,
+  "external_player_reported": false,
+  "actual_seek_latencies_measured": false,
+  "strict_phone_http_range_protocol_verified": false,
+  "phone_upstream_transfer_bytes_measured": false,
+  "phone_response_body_hash_checked": false,
+  "test_samples_silent": true,
+  "audible_output_quality_tested": false,
+  "background_or_lockscreen_tested": false,
+  "new_cloud_uploads_in_this_media_phase": 0,
+  "assistant_directly_controlled_phone": false,
+  "private_credentials_or_raw_download_urls_included": false
+}

@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "phase": "W01-A",
+  "date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "status": "PARTIAL_DOWNLOAD_LIMIT_REACHED",
+  "apk_produced": false,
+  "android_device_tested": false,
+  "authorization": {
+    "development": "approved by explicit user reply",
+    "download_allowance_bytes": 1073741824,
+    "phone_adb_usb": false,
+    "real_accounts_cloud": false,
+    "git_stage_commit_push_release": false
+  },
+  "environment": {
+    "host_os": "macOS 27.0.1 arm64",
+    "xcode_observed": "27.2 (27B52)",
+    "xcode_installed_or_upgraded_this_work": false,
+    "flutter": "3.47.5",
+    "flutter_commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+    "dart": "3.13.4",
+    "go": "go1.27.3",
+    "gomobile": "v0.0.0-20261011034528-197770444867",
+    "openlist_commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+    "gradle": "9.3.1",
+    "agp_requested_not_fully_applied": "9.1.0",
+    "kotlin_android_requested_not_compiled": "2.4.0",
+    "kotlin_host_diagnostic_only": "2.2.21",
+    "jdk": "17.0.15 aarch64",
+    "ndk": "28.2.13676358",
+    "android_java_sdk": 36,
+    "android_native_api": 24
+  },
+  "checks": {
+    "shared_dart": {
+      "status": "PASS in earlier part of this work package",
+      "analyze": "No issues found",
+      "tests": 13
+    },
+    "go_core_smoke_final": {
+      "status": "PASS",
+      "tests": 1,
+      "real_core_on_host": true,
+      "android_jni_executed": false,
+      "covers": [
+        "authentication",
+        "unauthenticated API rejection",
+        "unsigned content rejection",
+        "fixture listing",
+        "full sample read comparison",
+        "listener released on stop",
+        "same-process reinitialization rejected",
+        "three-driver runtime allowlist"
+      ]
+    },
+    "aar": {
+      "scope": "AAR static only; no APK or Android runtime claim",
+      "aar": ".local/w01-a/openlist.aar",
+      "bytes": 41193717,
+      "sha256": "ebe817a98dd00c50327b9dc68e39062465db5c888ae0b5a917d49cce351d90a0",
+      "build_id": "pv-w01a-b4363182e5fd0328",
+      "abi": "arm64-v8a",
+      "load_alignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "elf_16kb_alignment_passed": true,
+      "jni_sha256": "88aaecf4b75a2740ebf656eac6a677b5d41f294056b34a91193eadf20f3a1006"
+    },
+    "host_kotlin_contracts": {
+      "status": "PASS",
+      "covers": [
+        "invalidated binding replies",
+        "old generations",
+        "different host/port/scheme",
+        "userinfo and fragment rejection"
+      ],
+      "compiler": "Gradle bundled 2.2.21; not Android Kotlin 2.4.0"
+    },
+    "host_kotlin_core_service_compile_diagnostic": {
+      "status": "PASS",
+      "android_jar": 36,
+      "actual_aar_java_interface": true,
+      "excluded": [
+        "MainActivity",
+        "CoreHostBridge"
+      ],
+      "not_target_android_build": true
+    },
+    "mac_app_integration": {
+      "status": "PASS",
+      "tests": 1,
+      "startup_cancel": true,
+      "complete_start_read_stop_cycles": 3,
+      "window_foreground_warning": true,
+      "new_manual_window_observation": false,
+      "normal_app_entry_rebuilt": true
+    },
+    "mac_bundle_signature": "PASS codesign --verify --deep --strict",
+    "syntax": "PASS Python AST, zsh -n, XML parsing",
+    "download_budget_unit": "PASS persisted cumulative cap and cannot silently change limit",
+    "apk_configuration_online": "BLOCKED: gateway Allowance Exhausted",
+    "apk_assemble_offline": "BLOCKED: missing cached classpath artifacts; no APK"
+  },
+  "network": {
+    "schema_version": 1,
+    "limit_bytes": 1006632960,
+    "owner_allowance_bytes": 1073741824,
+    "accounted_bytes": 1006632960,
+    "measurement": "upstream encrypted received and sent bytes; 64MiB reserve",
+    "hosts": {
+      "go.dev": 6676,
+      "dl.google.com": 151473782,
+      "codeload.github.com": 1923522,
+      "services.gradle.org": 12878,
+      "github.com": 17456,
+      "release-assets.githubusercontent.com": 137231526,
+      "proxy.golang.org": 151352561,
+      "sum.golang.org": 16469430,
+      "storage.googleapis.com": 382858128,
+      "plugins.gradle.org": 185423,
+      "plugins-artifacts.gradle.org": 24560073,
+      "repo.maven.apache.org": 140541505
+    },
+    "gateway_stopped": true,
+    "ledger_sha256": "38194d7574e86664a53f987707e0280311c72f88f392390ce01e8b12e8a14f73",
+    "not_carrier_billing_measurement": true
+  },
+  "openlist_driver_scope": {
+    "runtime_allowlist": [
+      "Local",
+      "BaiduNetdisk",
+      "Crypt"
+    ],
+    "compiled_driver_packages": [
+      "base",
+      "baidu_netdisk",
+      "crypt",
+      "local",
+      "115",
+      "115_open",
+      "123",
+      "123_open",
+      "189pc",
+      "guangyapan",
+      "pikpak",
+      "thunder",
+      "thunder_browser",
+      "thunderx",
+      "openlist"
+    ],
+    "strict_compile_pruning_complete": false,
+    "configured_storage": "synthetic Local fixture only"
+  },
+  "actual_module_locks": {
+    "upstream_sha256": {
+      "go.mod": "bee94377f67c568b7aef0dec840e290a213665f86a3b79685a73a36f490e8500",
+      "go.sum": "4b97daef60adaa3b9894f28a7c447fe90a515b457719ea957cd2e8e79f4d1332"
+    },
+    "locked": {
+      "go.mod": {
+        "path": "toolchains/w01-android.go.mod",
+        "sha256": "f1005b52c36bd2fa60809a14ca217376f773edb0a142cbf84b00c9687dc21ae2"
+      },
+      "go.sum": {
+        "path": "toolchains/w01-android.go.sum",
+        "sha256": "3304ede0f5c43338a76d0001225a6e5dcf0a6292700db68f2efc054db5b4c627"
+      }
+    },
+    "resolution_note": "Pinned gomobile requires higher golang.org/x module versions; this explicit lock records the actual MVS combination, not the unchanged stock module graph."
+  },
+  "debug_certificate": {
+    "sha256": "b742c39a2b3e4be2662ccd2e9bea874d3b7501aac3e984b7ecc0e650bd46db53",
+    "actual_apk_signature_verified": false
+  },
+  "remaining": {
+    "missing_cached_classpath_artifacts": [
+      "com.android.tools.build:apksig:9.1.0",
+      "com.android.tools:annotations:32.1.0",
+      "com.android:signflinger:9.1.0",
+      "com.android:zipflinger:9.1.0",
+      "com.google.auto.value:auto-value-annotations:1.6.2",
+      "com.google.code.findbugs:jsr305:3.0.2",
+      "com.google.errorprone:error_prone_annotations:2.28.0",
+      "com.google.flatbuffers:flatbuffers-java:1.12.0",
+      "com.google.guava:failureaccess:1.0.2",
+      "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+      "com.google.j2objc:j2objc-annotations:3.0.0",
+      "com.googlecode.juniversalchardet:juniversalchardet:1.0.3",
+      "com.sun.istack:istack-commons-runtime:3.0.8",
+      "com.sun.xml.fastinfoset:FastInfoset:1.2.16",
+      "commons-codec:commons-codec:1.17.1",
+      "commons-logging:commons-logging:1.2",
+      "jakarta.activation:jakarta.activation-api:1.2.1",
+      "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2",
+      "net.java.dev.jna:jna-platform:5.6.0",
+      "net.java.dev.jna:jna:5.6.0",
+      "org.apache.commons:commons-lang3:3.16.0",
+      "org.apache.httpcomponents:httpclient:4.5.14",
+      "org.apache.httpcomponents:httpcore:4.4.16",
+      "org.bitbucket.b_c:jose4j:0.9.5",
+      "org.bouncycastle:bcprov-jdk18on:1.79",
+      "org.bouncycastle:bcutil-jdk18on:1.79",
+      "org.checkerframework:checker-qual:3.43.0",
+      "org.glassfish.jaxb:txw2:2.3.2",
+      "org.jdom:jdom2:2.0.6",
+      "org.jetbrains.kotlin:kotlin-build-tools-api:2.4.0",
+      "org.jetbrains.kotlin:kotlin-daemon-client:2.4.0",
+      "org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.4.0",
+      "org.jetbrains.kotlin:kotlin-native-utils:2.4.0",
+      "org.jetbrains.kotlin:kotlin-tooling-core:2.4.0",
+      "org.jetbrains.kotlin:kotlin-util-io:2.4.0",
+      "org.jetbrains.kotlin:kotlin-util-klib:2.4.0",
+      "org.jvnet.staxex:stax-ex:1.8.1",
+      "org.slf4j:slf4j-api:1.7.30"
+    ],
+    "flutter_arm64_debug_jni_known_bytes": 180591438,
+    "total_remaining_transfer_size_known": false,
+    "apk_permissions_abi_zip_alignment_signature": "not verified",
+    "A04_A09": "not executed; phone scope not authorized"
+  },
+  "cleanup": {
+    "matched_owned_app_core_or_build_processes": [],
+    "mac_active_marker_exists": false,
+    "mac_run_directory_entries": 0,
+    "network_gateway_session_stopped": true
+  },
+  "source_sha256": {
+    ".gitignore": "32a83f4f0c9eeb6963cf36c8c4ad36e0d6cd23b9dc746477a9eda2bd00a4b38d",
+    "apps/privatevault/android/app/build.gradle.kts": "021e429613ee07965b53eb47785732543804f097e7880a6103714915f6e78af5",
+    "apps/privatevault/android/app/src/main/AndroidManifest.xml": "56b26435325de7819e5ae1f389b2b1fae3219a8e8326ec9f880124de47789001",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreEndpoint.kt": "772f6bfad6b7714706cd932f1afb0227b7194e65a866470e94a9f733ec6eda74",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreHostBridge.kt": "d36e77c58d05e2d200219b810d61147841cf3c5e92fe2d65737f005dd15cc9b0",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreProbe.kt": "6fa1a3de046b31820cff6dd48ef25717ddd4a19186f966a3c8f8711c7a97febc",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreProtocol.kt": "24cc693badc716a26d0290c0f5fa0a6bf578b0a1e9fd26dbdb28e969e748eb61",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreReplyGate.kt": "90ca51ccc2c9991b7244368566d23e271070ad15d133f82f15ca261d2996adb7",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreService.kt": "e93967eacadaaefb2336ab3de535f9c896a1c9b0f0662e996dcb07aae4e829fd",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/GoCoreAdapter.kt": "35f0a744a2fe33b502283a7eec5f7bc08b5fce8ce480558c6258faf3ae9edb72",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/MainActivity.kt": "d5b978648e5a7214bac350b96f28f7ab34a75217ced2f3b484ced0b12f4845b0",
+    "apps/privatevault/android/app/src/main/res/xml/data_extraction_rules.xml": "f2f358d89c06fa712f6887b9bac1d9859b8843ec79f614084d32029efb76db5c",
+    "apps/privatevault/android/app/src/main/res/xml/network_security_config.xml": "9fa73b0651987288a63a5997d388394638c02487e941b3829f3897b99841998f",
+    "apps/privatevault/android/build.gradle.kts": "359d57449228bd718c82801173a5270451e6dc9e931a9c454cd478062e64a494",
+    "apps/privatevault/android/gradle.properties": "604760321295989b828bad6db4c89522bcb8ac4e7cd985885006ab433c1473aa",
+    "apps/privatevault/android/settings.gradle.kts": "257d11ce178e7ba83d1d1a881a905efc898f92aea69dfe37ac26a6259a34a3e9",
+    "apps/privatevault/assets/w01_sample.png": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+    "apps/privatevault/lib/app.dart": "48726c6d6d146908dfa1c18b44d8f01dfc5a9d2de7d007fb2c214b5e6398043c",
+    "apps/privatevault/lib/core_host/android_core_host.dart": "f1b40e3c93149162a3610c81c0a3ab26f3fa3859b8a70f3622624dbb0e43381b",
+    "apps/privatevault/lib/core_host/channel_core_host.dart": "775be0fa956c0c4d7472152d23d3999d31e23c22f6ff808121ac4595da315676",
+    "apps/privatevault/lib/core_host/core_host.dart": "b787b10b10eff9176b181fa7fb54a350416cbdfca9fa83caf102a17cffd6bb17",
+    "apps/privatevault/lib/core_host/core_host_factory.dart": "4e431d66977833959e685bf770b402ba2801945a892d49885372225fd0da6567",
+    "apps/privatevault/lib/core_host/core_state.dart": "ea3b9f78211e691467ced9842b7d0a7fcbae12321d5a2589e01603e148ba8aff",
+    "apps/privatevault/lib/core_host/macos_core_host.dart": "2e28e56666a39ed2bba3d1c07f1a7e5e2485abc77467b6fd0cff82322d317dd9",
+    "apps/privatevault/lib/features/core_status/core_status_page.dart": "2932095a5b26a152bd35c7219a0c08d28c8c1ae999ab2bac45d6126c11d654a2",
+    "apps/privatevault/lib/main.dart": "b2565b36d8d1bb5c8c7292cfea261d9aa574a3d35534987b4c1a5a3f7f97faac",
+    "apps/privatevault/pubspec.lock": "a8ea97ca288738ec9ef669f694c0a4a8d59d345362611d02bffbdf5ee5b97d93",
+    "apps/privatevault/pubspec.yaml": "6b8adf60988b5b2d2cc54cfd6b63797623932de6783ec3d22359041cfc457307",
+    "apps/privatevault/test/.DS_Store": "6f9ba64ad6eefdcc211ac5661527d3fbe6a4bc5a1db0d5cb6dc9348fcdbfffdd",
+    "apps/privatevault/test/core_host/core_host_factory_test.dart": "9106629b44e9b1fc34d543fcc787ef7af2e2a68b3738bd802df1193f9a3778ca",
+    "apps/privatevault/test/core_host/core_state_test.dart": "510a6a9b11dca3f9a5df8c413e20c670719788489650928c27e366055c50a214",
+    "apps/privatevault/test/core_host/macos_core_host_test.dart": "d8b91c7bb345cb25164375471bf67530967a72493bd2f03521867575acf27d36",
+    "apps/privatevault/test/core_status_page_test.dart": "6a18b6c3ea2c71e5fc25ac725c10035273669b8f597d3af680ca629ccd770000",
+    "apps/privatevault/test/native/CoreHostSmoke.swift": "8b9cdc9dc917cac85b79a15410a38853285868f0fa47dbf39b879fea6c504a96",
+    "native/openlist_bridge/README.md": "0c36a4ed3c83b2325811093d43f108ade05801edcd35b91c323f73f31edd8216",
+    "native/openlist_bridge/overlay/op/privatevault_driver_allowlist.go": "f83b40e320c9a53977dbbb7af0880ca291bac26d389b2d2f2811b008d6d8a9dc",
+    "native/openlist_bridge/pvcore.go": "1620146194fe2c662f9210d67451051bf5d8f1ed1e670b92f2afbc0577900f14",
+    "native/openlist_bridge/pvcore_test.go": "ea12ca2f15d88a3cf116ca0c2b6b5173aec7226e37019e374799c0b05e81885e",
+    "native/openlist_bridge/resources/assets/placeholder.txt": "8aed87558e24cccd187865521651d4399e727ed349cdf5cd3ee4467ec0b886e0",
+    "native/openlist_bridge/resources/images/placeholder.txt": "8aed87558e24cccd187865521651d4399e727ed349cdf5cd3ee4467ec0b886e0",
+    "native/openlist_bridge/resources/index.html": "a43b5e5b8e0a6dd1ac35df63a1f54ed53036e4052cbf7c3b358790e00ac58614",
+    "native/openlist_bridge/resources/static/placeholder.txt": "8aed87558e24cccd187865521651d4399e727ed349cdf5cd3ee4467ec0b886e0",
+    "native/openlist_bridge/resources/streamer/placeholder.txt": "8aed87558e24cccd187865521651d4399e727ed349cdf5cd3ee4467ec0b886e0",
+    "toolchains/w01-android.go.mod": "f1005b52c36bd2fa60809a14ca217376f773edb0a142cbf84b00c9687dc21ae2",
+    "toolchains/w01-android.go.sum": "3304ede0f5c43338a76d0001225a6e5dcf0a6292700db68f2efc054db5b4c627",
+    "toolchains/w01-android.json": "f768d51ce949fae08147dcea4f2833492131763ddadfcdcaf057a435e91feada",
+    "tools/build_w01_android_aar.sh": "2fdb880ed1b2ad47898120f6b2f8cf503738efcc8c095153ce3836e91f1ea2cf",
+    "tools/build_w01_android_apk.sh": "efd1ea45ca59caad288a5fbb37da194900bc0a4b19171d7d2569f1174b9f13da",
+    "tools/check_w01_android_artifacts.py": "b10f434e087eb4c83098296476ca36126c0f5287d14b7312d1f6b44e6ddc0eb9",
+    "tools/check_w01_android_contracts.sh": "87193f4c1278338f357f63df0e022df89d3ef98af06504d21e7c547137e0090d",
+    "tools/check_w01_android_core.sh": "99b191aa5cc03b5fa2d3cf614255c59ff739c06c2b0948377c3b644bc6aede01",
+    "tools/check_w01_dart.sh": "d01f932ef4ee44ff8d47dd17e39f7951bf98b6d226e0ef92765399ae35364dba",
+    "tools/check_w01_macos_regression.sh": "1480eb91b25b6541031720bbdadd4780f23cca313a094f98b24b326592456807",
+    "tools/kotlin/CheckW01Contracts.kt": "77cc2d12e3b343bd3c0c61aff4593c63d4eb23e4cd664c09900995fca5a0f887",
+    "tools/prepare_w01_android.py": "48c82b6f8fad283c493d9d846a9097ac263d65708e3876915aa78251884bd676",
+    "tools/stage_w01_android_bridge.py": "93ae9560a0170cfb571bf6291cb821802eec9dba5934323d36577e60a7ff7594",
+    "tools/test_w01_network_budget.py": "2a16d89ef15bb0502c2f2da23d2b750e259c7a9ed4dca80656cc5f269dc0929b",
+    "tools/w01_android_env.sh": "025027389e0e9eea5acfb64ccf09ab05b0b961adf1f46cc5976a2f7ee0c9db7e",
+    "tools/w01_network_budget.py": "2971bae2b97792b627819ceecbbb26278a575be778a4ea6baa695685bb95d5b3"
+  },
+  "scope_limits": [
+    "No phone/adb/USB/emulator",
+    "No real accounts or media/cloud operations",
+    "No Git writes or release",
+    "No Windows execution",
+    "No W02 implementation",
+    "AAR/static/host results do not establish Android runtime success",
+    "No full outbound traffic capture"
+  ],
+  "public_inputs": {
+    "openlist_archive": {
+      "commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+      "sha256": "27482375828488997eb17727111b6606fdcb0f97d8daf68431db66dd6301e5d1"
+    },
+    "go_archive": {
+      "sha256": "dd3908cf20959d798c1e06ebe5b72213f0505ce01373b40ce3110975a6cd99c2"
+    },
+    "gradle_archive": {
+      "sha256": "b266d5ff6b90eada6dc3b20cb090e3731302e553a27c5d3e4df1f0d76beaff06"
+    }
+  }
+}

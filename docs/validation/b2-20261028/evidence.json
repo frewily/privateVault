@@ -1,0 +1,864 @@
+{
+  "report": "PrivateVault B2 media and cloud Range validation",
+  "version": "0.1",
+  "execution_dates": [
+    "2026-10-27",
+    "2026-10-28"
+  ],
+  "timezone": "Asia/Shanghai",
+  "core_version": "OpenList v4.2.8 arm64",
+  "core_source_commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+  "fixtures": {
+    "files": [
+      {
+        "name": "sample.wav",
+        "bytes": 960078,
+        "sha256": "d9f19abdb1241a1d55108f7c8c45ab7bfa2452b59e2427dfb1b5dac94beff1e5",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "pcm_s16le",
+              "codec_type": "audio",
+              "sample_rate": "48000"
+            }
+          ],
+          "format": {
+            "duration": "10.000000",
+            "size": "960078"
+          }
+        }
+      },
+      {
+        "name": "sample.mp4",
+        "bytes": 44852235,
+        "sha256": "cd5603de378fa45fe453ca8bec0ffe940425d97c2aefabaea7b279b90be3c1cd",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 640,
+              "height": 360
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "sample_rate": "48000"
+            }
+          ],
+          "format": {
+            "duration": "45.000000",
+            "size": "44852235"
+          }
+        }
+      }
+    ],
+    "new_plain_source_bytes": 45812313,
+    "new_remote_object_bytes_expected": 91635890,
+    "synthetic_only": true
+  },
+  "full_readbacks": [
+    {
+      "mode": "plain",
+      "fixture": "sample.wav",
+      "status": 200,
+      "bytes": 960078,
+      "sha256": "d9f19abdb1241a1d55108f7c8c45ab7bfa2452b59e2427dfb1b5dac94beff1e5",
+      "matches_source": true,
+      "content_length": "960078",
+      "seconds": 5.9771,
+      "upload_seconds": 7.1566
+    },
+    {
+      "mode": "crypt",
+      "fixture": "sample.wav",
+      "status": 200,
+      "bytes": 960078,
+      "sha256": "d9f19abdb1241a1d55108f7c8c45ab7bfa2452b59e2427dfb1b5dac94beff1e5",
+      "matches_source": true,
+      "content_length": "960078",
+      "seconds": 4.5593,
+      "upload_seconds": 13.6297
+    },
+    {
+      "mode": "plain",
+      "fixture": "sample.mp4",
+      "status": 200,
+      "bytes": 44852235,
+      "sha256": "cd5603de378fa45fe453ca8bec0ffe940425d97c2aefabaea7b279b90be3c1cd",
+      "matches_source": true,
+      "content_length": "44852235",
+      "seconds": 9.9519,
+      "upload_seconds": 46.7133
+    },
+    {
+      "mode": "crypt",
+      "fixture": "sample.mp4",
+      "status": 200,
+      "bytes": 44852235,
+      "sha256": "cd5603de378fa45fe453ca8bec0ffe940425d97c2aefabaea7b279b90be3c1cd",
+      "matches_source": true,
+      "content_length": "44852235",
+      "seconds": 13.3383,
+      "upload_seconds": 43.8471
+    }
+  ],
+  "media_summary": {
+    "full_readbacks_passed": 4,
+    "new_media_objects": 4,
+    "total_media_objects": 6
+  },
+  "cloud_manifest": {
+    "cloud_root": "/PrivateVault-验证-20261027",
+    "plain": [
+      {
+        "name": "样本.mp4",
+        "bytes": 44852235
+      },
+      {
+        "name": "样本.png",
+        "bytes": 9763
+      },
+      {
+        "name": "样本.wav",
+        "bytes": 960078
+      }
+    ],
+    "logical_crypt": [
+      {
+        "name": "样本.png",
+        "bytes": 9763
+      },
+      {
+        "name": "样本.mp4",
+        "bytes": 44852235
+      },
+      {
+        "name": "样本.wav",
+        "bytes": 960078
+      }
+    ],
+    "cipher_directory": "joecrpj1qe20un7so8i0pn347o",
+    "cipher": [
+      {
+        "name": "3o2acgbmom15k3iq3ap92j0um8",
+        "bytes": 9811
+      },
+      {
+        "name": "9egldbbbp1hol38ftbud6dhc58",
+        "bytes": 44863227
+      },
+      {
+        "name": "njub667ttbk9m7fj2hej7de7cs",
+        "bytes": 960350
+      }
+    ],
+    "total_media_objects": 6,
+    "cloud_deletion_performed": false
+  },
+  "ranges": [
+    {
+      "mode": "plain",
+      "case": "tail",
+      "cold_core_start": true,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 44786699-44852234/44852235",
+      "content_length": "65536",
+      "body_bytes": 65536,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 82834,
+      "relay_upstream_increment": 7381,
+      "seconds_to_headers": 3.1363,
+      "seconds_to_first_body_byte": 3.1363,
+      "seconds_total": 3.2141,
+      "measurement_settle_seconds": 0.4139,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "plain",
+      "case": "middle",
+      "cold_core_start": true,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 22426117-22491652/44852235",
+      "content_length": "65536",
+      "body_bytes": 65536,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 82800,
+      "relay_upstream_increment": 7380,
+      "seconds_to_headers": 3.2046,
+      "seconds_to_first_body_byte": 3.2046,
+      "seconds_total": 3.3807,
+      "measurement_settle_seconds": 0.4204,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "plain",
+      "case": "first",
+      "cold_core_start": true,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 0-65535/44852235",
+      "content_length": "65536",
+      "body_bytes": 65536,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 82814,
+      "relay_upstream_increment": 7372,
+      "seconds_to_headers": 2.4246,
+      "seconds_to_first_body_byte": 2.4246,
+      "seconds_total": 2.5839,
+      "measurement_settle_seconds": 0.4223,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "plain",
+      "case": "cross-block",
+      "cold_core_start": true,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 65535-65536/44852235",
+      "content_length": "2",
+      "body_bytes": 2,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 17160,
+      "relay_upstream_increment": 7393,
+      "seconds_to_headers": 2.0244,
+      "seconds_to_first_body_byte": 2.0244,
+      "seconds_total": 2.0245,
+      "measurement_settle_seconds": 0.4097,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "plain",
+      "case": "suffix",
+      "cold_core_start": false,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 44851735-44852234/44852235",
+      "content_length": "500",
+      "body_bytes": 500,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 1222,
+      "relay_upstream_increment": 1377,
+      "seconds_to_headers": 0.1625,
+      "seconds_to_first_body_byte": 0.1625,
+      "seconds_total": 0.1625,
+      "measurement_settle_seconds": 0.4196,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "plain",
+      "case": "open-ended",
+      "cold_core_start": false,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 44851735-44852234/44852235",
+      "content_length": "500",
+      "body_bytes": 500,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 1222,
+      "relay_upstream_increment": 1382,
+      "seconds_to_headers": 0.1352,
+      "seconds_to_first_body_byte": 0.1352,
+      "seconds_total": 0.1353,
+      "measurement_settle_seconds": 0.421,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "plain",
+      "case": "invalid",
+      "cold_core_start": false,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 400,
+      "content_range": null,
+      "content_length": "2028",
+      "body_bytes": 2028,
+      "matches_source_range": null,
+      "passed": false,
+      "relay_downstream_increment": 17097,
+      "relay_upstream_increment": 7385,
+      "seconds_to_headers": 2.271,
+      "seconds_to_first_body_byte": 2.271,
+      "seconds_total": 2.2711,
+      "measurement_settle_seconds": 0.4225,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false,
+      "invalid_range_error_text_detected": false,
+      "auth_or_network_error_text_detected": false,
+      "provider_range_parameter_error_31023": true,
+      "nonfatal_protocol_contract_mismatch": true,
+      "diagnostic_repeat_observation": true
+    },
+    {
+      "mode": "crypt",
+      "case": "tail",
+      "cold_core_start": true,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 44786699-44852234/44852235",
+      "content_length": "65536",
+      "body_bytes": 65536,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 111625,
+      "relay_upstream_increment": 10405,
+      "seconds_to_headers": 5.5232,
+      "seconds_to_first_body_byte": 5.5232,
+      "seconds_total": 5.5934,
+      "measurement_settle_seconds": 0.4163,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "crypt",
+      "case": "middle",
+      "cold_core_start": true,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 22426117-22491652/44852235",
+      "content_length": "65536",
+      "body_bytes": 65536,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 151606,
+      "relay_upstream_increment": 10433,
+      "seconds_to_headers": 6.3141,
+      "seconds_to_first_body_byte": 6.3141,
+      "seconds_total": 6.4424,
+      "measurement_settle_seconds": 0.4187,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "crypt",
+      "case": "first",
+      "cold_core_start": true,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 0-65535/44852235",
+      "content_length": "65536",
+      "body_bytes": 65536,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 85231,
+      "relay_upstream_increment": 9055,
+      "seconds_to_headers": 5.2877,
+      "seconds_to_first_body_byte": 5.2877,
+      "seconds_total": 5.2878,
+      "measurement_settle_seconds": 0.4238,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "crypt",
+      "case": "cross-block",
+      "cold_core_start": true,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 65535-65536/44852235",
+      "content_length": "2",
+      "body_bytes": 2,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 151645,
+      "relay_upstream_increment": 10425,
+      "seconds_to_headers": 4.4861,
+      "seconds_to_first_body_byte": 4.4861,
+      "seconds_total": 4.4861,
+      "measurement_settle_seconds": 0.4215,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "crypt",
+      "case": "suffix",
+      "cold_core_start": false,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 44851735-44852234/44852235",
+      "content_length": "500",
+      "body_bytes": 500,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 29760,
+      "relay_upstream_increment": 4414,
+      "seconds_to_headers": 1.7101,
+      "seconds_to_first_body_byte": 1.7101,
+      "seconds_total": 1.7101,
+      "measurement_settle_seconds": 0.4183,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "crypt",
+      "case": "open-ended",
+      "cold_core_start": false,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 206,
+      "content_range": "bytes 44851735-44852234/44852235",
+      "content_length": "500",
+      "body_bytes": 500,
+      "matches_source_range": true,
+      "passed": true,
+      "relay_downstream_increment": 29771,
+      "relay_upstream_increment": 4414,
+      "seconds_to_headers": 2.6392,
+      "seconds_to_first_body_byte": 2.6392,
+      "seconds_total": 2.6392,
+      "measurement_settle_seconds": 0.4178,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false
+    },
+    {
+      "mode": "crypt",
+      "case": "invalid",
+      "cold_core_start": false,
+      "fresh_temp_content_bytes_before_request": 0,
+      "status": 416,
+      "content_range": "bytes */44852235",
+      "content_length": "33",
+      "body_bytes": 33,
+      "matches_source_range": null,
+      "passed": true,
+      "relay_downstream_increment": 2601,
+      "relay_upstream_increment": 1685,
+      "seconds_to_headers": 0.9021,
+      "seconds_to_first_body_byte": 0.9021,
+      "seconds_total": 0.9021,
+      "measurement_settle_seconds": 0.4171,
+      "increment_includes_tls_and_metadata": true,
+      "upstream_increment_below_1MiB": true,
+      "range_safety_limit_hit": false,
+      "invalid_range_error_text_detected": true,
+      "auth_or_network_error_text_detected": false,
+      "provider_range_parameter_error_31023": false
+    }
+  ],
+  "range_summary": {
+    "cases_tested": 14,
+    "cases_passed": 13,
+    "positive_range_integrity_cases_passed": 12,
+    "negative_contract_failures": 1,
+    "cold_core_cases": 8,
+    "new_process_and_empty_tempdir_per_cold_case": true,
+    "cloud_or_cdn_cache_purged": false,
+    "plain_boundary_diagnostic_repeats": 1,
+    "core_or_provider_error_handling_modified": false
+  },
+  "ordinary_invalid_range_diagnostic": {
+    "local_http_status": 400,
+    "content_range_present": false,
+    "provider_error_code": 31023,
+    "provider_error_msg": "param error , http_range",
+    "error_page_contains_upstream_url": true,
+    "error_page_contains_url_query": true,
+    "raw_url_or_query_values_exported": false
+  },
+  "browser": {
+    "browser": "ChatGPT in-app browser on macOS",
+    "completed_date": "2026-10-28",
+    "synthetic_silent_media": true,
+    "audio": {
+      "plain": {
+        "ui_start": "00:00 / 00:10",
+        "ui_observed_after_play": "00:09 / 00:10",
+        "progress_observed": true,
+        "page_preloaded_before_quota_resume": true
+      },
+      "crypt": {
+        "ui_start": "00:00 / 00:10",
+        "ui_observed_after_play": "00:04 / 00:10",
+        "progress_observed": true
+      }
+    },
+    "video": {
+      "plain": {
+        "start": {
+          "currentTime": 0.122899,
+          "decodedFrames": null,
+          "duration": 45,
+          "error": null,
+          "paused": false,
+          "readyState": 3,
+          "sourceOrigin": "http://127.0.0.1:15245",
+          "sourcePath": "/p/cloud-test/plain/%E5%AA%92%E4%BD%93/%E6%A0%B7%E6%9C%AC.mp4",
+          "videoHeight": 360,
+          "videoWidth": 640
+        },
+        "before_middle_seek": {
+          "currentTime": 25.032868,
+          "decodedFrames": null,
+          "error": null,
+          "paused": false,
+          "readyState": 4
+        },
+        "middle": {
+          "currentTime": 21.907732,
+          "decodedFrames": null,
+          "error": null,
+          "paused": false,
+          "readyState": 4
+        },
+        "before_tail_seek": {
+          "currentTime": 45,
+          "error": null,
+          "paused": true,
+          "readyState": 4
+        },
+        "tail": {
+          "currentTime": 39.699758,
+          "duration": 45,
+          "error": null,
+          "height": 360,
+          "paused": true,
+          "readyState": 4,
+          "width": 640
+        },
+        "tail_resume": {
+          "currentTime": 40.051788,
+          "duration": 45,
+          "error": null,
+          "height": 360,
+          "paused": false,
+          "readyState": 4,
+          "width": 640
+        },
+        "tail_resume_followup": {
+          "currentTime": 40.137125,
+          "error": null,
+          "paused": false,
+          "readyState": 4
+        },
+        "tail_navigation_wait_timeout_then_loaded": true,
+        "tail_playback_resumed": true
+      },
+      "crypt": {
+        "start": {
+          "currentTime": 0.080716,
+          "duration": 45,
+          "error": null,
+          "height": 360,
+          "paused": false,
+          "readyState": 3,
+          "sourceOrigin": "http://127.0.0.1:15245",
+          "sourcePath": "/p/crypt-test/%E5%AA%92%E4%BD%93/%E6%A0%B7%E6%9C%AC.mp4",
+          "width": 640
+        },
+        "middle": {
+          "currentTime": 22.223525,
+          "duration": 45,
+          "error": null,
+          "height": 360,
+          "paused": false,
+          "readyState": 4,
+          "width": 640
+        },
+        "before_tail_seek": {
+          "currentTime": 45,
+          "error": null,
+          "paused": true,
+          "readyState": 4
+        },
+        "tail": {
+          "currentTime": 39.95962,
+          "duration": 45,
+          "error": null,
+          "height": 360,
+          "paused": true,
+          "readyState": 4,
+          "width": 640
+        },
+        "tail_resume": {
+          "currentTime": 40.077749,
+          "duration": 45,
+          "error": null,
+          "height": 360,
+          "paused": false,
+          "readyState": 4,
+          "width": 640
+        },
+        "tail_resume_followup": {
+          "currentTime": 40.10362,
+          "error": null,
+          "paused": false,
+          "readyState": 4
+        },
+        "tail_playback_resumed": true,
+        "visual_frame_confirmation": {
+          "method": "separate screenshot after paused seek and stable position",
+          "middle": {
+            "state": {
+              "currentTime": 21.9981,
+              "error": null,
+              "paused": true,
+              "readyState": 4
+            },
+            "embedded_frame_timecode": "00:00:21.967",
+            "screenshot": "crypt-video-middle-stable.jpg"
+          },
+          "tail": {
+            "state": {
+              "currentTime": 39.9981,
+              "error": null,
+              "paused": true,
+              "readyState": 4
+            },
+            "embedded_frame_timecode": "00:00:39.967",
+            "screenshot": "crypt-video-tail-stable.jpg"
+          },
+          "initial_immediate_tail_screenshot_excluded_from_frame_acceptance": true
+        }
+      }
+    },
+    "limits": [
+      "Audio output quality not tested; samples are silent",
+      "UI playback is separate from the API cold-core Range measurements",
+      "Immediate post-seek capture can retain a prior frame; stable paused frame timecodes were separately confirmed"
+    ],
+    "viewport_at_final_capture": {
+      "width": 1274,
+      "height": 717
+    },
+    "completed": {
+      "audio_progress_cases": 2,
+      "video_start_middle_and_tail_cases": 2,
+      "all_local_test_media_routes": true,
+      "cloud_cold_browser_seek_claimed": false,
+      "audible_output_quality_tested": false
+    },
+    "viewport_note": "Earlier narrow captures were on macOS too; the final stable-frame captures use a wide viewport."
+  },
+  "resource_samples_during_media": [
+    {
+      "label": "before_uploads",
+      "workspace_bytes": 197000974,
+      "system_free_bytes": 252783169536
+    },
+    {
+      "label": "plain-sample.wav",
+      "workspace_bytes": 197962604,
+      "system_free_bytes": 252780830720
+    },
+    {
+      "label": "crypt-sample.wav",
+      "workspace_bytes": 198923920,
+      "system_free_bytes": 252778803200
+    },
+    {
+      "label": "plain-sample.mp4",
+      "workspace_bytes": 243778004,
+      "system_free_bytes": 252734205952
+    },
+    {
+      "label": "crypt-sample.mp4",
+      "workspace_bytes": 288632252,
+      "system_free_bytes": 252692795392
+    }
+  ],
+  "final_snapshot": {
+    "observed_date": "2026-10-28",
+    "workspace_bytes": 289028899,
+    "system_free_bytes": 254361600000,
+    "workspace_budget_bytes": 2147483648,
+    "minimum_free_bytes": 16106127360,
+    "sampling": "after final read-only visual recheck and service stop; discrete logical-size snapshot",
+    "root_mode": "0o700",
+    "private_mode": "0o700",
+    "ledger": {
+      "upstream_bytes": 92184050,
+      "downstream_bytes": 186727802,
+      "budget_limit_hit": false,
+      "range_limit_hit": false
+    },
+    "screenshots": [
+      {
+        "file": "crypt-audio.jpg",
+        "encoding": "JPEG",
+        "width": 1280,
+        "height": 720,
+        "sha256": "be9f9b31e602b9d537d6578d9748d40a2ca6098fbb2ed8c4bef4cb584a9dc9b1",
+        "selected_for_export": true
+      },
+      {
+        "file": "crypt-video-middle-stable.jpg",
+        "encoding": "JPEG",
+        "width": 1274,
+        "height": 717,
+        "sha256": "05ec0e3afd2b841c8a1c63bd34925ac1bfa0c589ee968baf552406a422d25ebe",
+        "selected_for_export": true
+      },
+      {
+        "file": "crypt-video-middle.jpg",
+        "encoding": "JPEG",
+        "width": 319,
+        "height": 827,
+        "sha256": "f1133a22da96df8878500b502d8c973326cb0b1816bb3c51b4617429afaf8bf7",
+        "selected_for_export": false
+      },
+      {
+        "file": "crypt-video-tail-playing.jpg",
+        "encoding": "JPEG",
+        "width": 319,
+        "height": 827,
+        "sha256": "cfb057370ee063a58c0abdc141a105e55ea866056bc5fd28ff05b9257df03b9c",
+        "selected_for_export": false
+      },
+      {
+        "file": "crypt-video-tail-stable.jpg",
+        "encoding": "JPEG",
+        "width": 1274,
+        "height": 717,
+        "sha256": "7777a3c46db7d05760cd04b5d2f6f8178eb0cacfa219c52bf0e6eaf8780d5a85",
+        "selected_for_export": true
+      },
+      {
+        "file": "crypt-video-tail.jpg",
+        "encoding": "JPEG",
+        "width": 319,
+        "height": 827,
+        "sha256": "3b7a05baa0b5595b9f6593eabd1c234e81ec2564187353d7809cb32dc43aab45",
+        "selected_for_export": false
+      },
+      {
+        "file": "plain-audio.jpg",
+        "encoding": "JPEG",
+        "width": 1280,
+        "height": 720,
+        "sha256": "7abb1d9b961c818bfd281d2a01857a0f4a2333e2ea35ab12155af7d7f9a4aaed",
+        "selected_for_export": true
+      },
+      {
+        "file": "plain-video-tail-playing.jpg",
+        "encoding": "JPEG",
+        "width": 319,
+        "height": 827,
+        "sha256": "d97cb07f55e32016c1e8ea630116c9c512b551c15321ce126e1683d575d457a3",
+        "selected_for_export": true
+      },
+      {
+        "file": "plain-video-tail.jpg",
+        "encoding": "JPEG",
+        "width": 1274,
+        "height": 717,
+        "sha256": "8252d2e0d260edeccba31aefd7d485e6b7462b4d76f40838929df461f8e56c31",
+        "selected_for_export": true
+      }
+    ],
+    "screenshot_note": "Original JPEG bytes preserved; initial suffix corrected without reencoding or pixel edits."
+  },
+  "network_totals": {
+    "upstream_bytes": 92184050,
+    "downstream_bytes": 186727802,
+    "budget_limit_hit": false,
+    "range_limit_hit": false,
+    "total_bytes": 278911852,
+    "budget_bytes": 536870912,
+    "scope": "Cumulative B2 TLS tunnel bytes across restarts, including final read-only frame confirmation; excludes DNS, loopback and TCP/IP headers."
+  },
+  "closeout": {
+    "process_exit_codes": {
+      "relay": 0,
+      "core": 0
+    },
+    "ports_15245_15246_no_listener_observed": true,
+    "dedicated_browser_tabs_closed": true,
+    "cloud_objects_retained": 6,
+    "cloud_deletion_performed": false,
+    "recovery": {
+      "provider_created": true,
+      "current_state_preserved_privately": true,
+      "refresh_value_changed_from_seed": false,
+      "old_seed_must_not_be_reimported": true,
+      "credential_values_printed": false
+    },
+    "no_original_openlist_configuration_accessed_or_modified": true,
+    "privatevault_business_implementation_started": false
+  },
+  "screenshots_exported": [
+    {
+      "file": "crypt-audio.jpg",
+      "encoding": "JPEG",
+      "width": 1280,
+      "height": 720,
+      "sha256": "be9f9b31e602b9d537d6578d9748d40a2ca6098fbb2ed8c4bef4cb584a9dc9b1",
+      "selected_for_export": true
+    },
+    {
+      "file": "crypt-video-middle-stable.jpg",
+      "encoding": "JPEG",
+      "width": 1274,
+      "height": 717,
+      "sha256": "05ec0e3afd2b841c8a1c63bd34925ac1bfa0c589ee968baf552406a422d25ebe",
+      "selected_for_export": true
+    },
+    {
+      "file": "crypt-video-tail-stable.jpg",
+      "encoding": "JPEG",
+      "width": 1274,
+      "height": 717,
+      "sha256": "7777a3c46db7d05760cd04b5d2f6f8178eb0cacfa219c52bf0e6eaf8780d5a85",
+      "selected_for_export": true
+    },
+    {
+      "file": "plain-audio.jpg",
+      "encoding": "JPEG",
+      "width": 1280,
+      "height": 720,
+      "sha256": "7abb1d9b961c818bfd281d2a01857a0f4a2333e2ea35ab12155af7d7f9a4aaed",
+      "selected_for_export": true
+    },
+    {
+      "file": "plain-video-tail-playing.jpg",
+      "encoding": "JPEG",
+      "width": 319,
+      "height": 827,
+      "sha256": "d97cb07f55e32016c1e8ea630116c9c512b551c15321ce126e1683d575d457a3",
+      "selected_for_export": true
+    },
+    {
+      "file": "plain-video-tail.jpg",
+      "encoding": "JPEG",
+      "width": 1274,
+      "height": 717,
+      "sha256": "8252d2e0d260edeccba31aefd7d485e6b7462b4d76f40838929df461f8e56c31",
+      "selected_for_export": true
+    }
+  ],
+  "limits": [
+    "Single synthetic WAV/MP4 pair, silent media",
+    "No Android/Windows runtime or cross-client Crypt verification",
+    "API cold-core Range observations separate from browser playback",
+    "No cloud/CDN cache purge; no precise seek-to-stable-frame latency",
+    "One ordinary invalid-Range contract failure retained, no product fix applied"
+  ]
+}

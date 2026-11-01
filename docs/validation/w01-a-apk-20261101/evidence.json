@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "phase": "W01-A device-free build batch",
+  "date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "status": "DEVICE_FREE_BUILD_CHECKS_COMPLETE_PHONE_PENDING",
+  "authorization": {
+    "development": "explicitly approved",
+    "additional_download_grant_bytes": 2147483648,
+    "cumulative_owner_allowance_bytes": 3221225472,
+    "phone_adb_usb": false,
+    "real_accounts_cloud": false,
+    "git_stage_commit_push_release": false
+  },
+  "apk": {
+    "schema_version": 1,
+    "scope": "APK static inspection only; no installation/device/JNI runtime test",
+    "apk": "/Users/frewily/projects/privateVault/apps/privatevault/build/android/app/outputs/apk/debug/app-debug.apk",
+    "bytes": 144463149,
+    "sha256": "1c9b646725f8bdc262c1fb9896449c874c810b25a6ded48b5aa5b8b03b335f20",
+    "package": "dev.privatevault.w01",
+    "version_code": "1",
+    "version_name": "0.1.0-w01a",
+    "min_sdk": 24,
+    "target_sdk": 36,
+    "abi": "arm64-v8a",
+    "permissions": [
+      "android.permission.INTERNET",
+      "dev.privatevault.w01.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "debuggable": true,
+    "backup_and_device_transfer_exclusions_verified": true,
+    "certificate_sha256": "b742c39a2b3e4be2662ccd2e9bea874d3b7501aac3e984b7ecc0e650bd46db53",
+    "signature_verified": true,
+    "zip_16kb_alignment_verified": true,
+    "core_build_id": "pv-w01a-eb7fff012b4d24b9",
+    "native_libraries": [
+      {
+        "name": "lib/arm64-v8a/libVkLayer_khronos_validation.so",
+        "bytes": 15240080,
+        "sha256": "ae445f7e74d402e3a367adb230b1edd9841899fcb3310166e5cc96a09ad37a3f",
+        "zip_data_offset": 4259840,
+        "elf_load_alignments": [
+          65536,
+          65536,
+          65536
+        ]
+      },
+      {
+        "name": "lib/arm64-v8a/libflutter.so",
+        "bytes": 38828704,
+        "sha256": "047acc6348bb5094466b42c3b060d9c9ae18c5a55c7191567f5ed6d4599ef0c5",
+        "zip_data_offset": 19513344,
+        "elf_load_alignments": [
+          65536,
+          65536,
+          65536
+        ]
+      },
+      {
+        "name": "lib/arm64-v8a/libgojni.so",
+        "bytes": 65952144,
+        "sha256": "5222a7c0a127715f3d8728ca2dd45090a3b4d37d7a5ee46eedf474abc35329dc",
+        "zip_data_offset": 58343424,
+        "elf_load_alignments": [
+          16384,
+          16384,
+          16384,
+          16384
+        ]
+      }
+    ],
+    "cleartext_exception": "127.0.0.1 only",
+    "core_service_exported": false,
+    "core_service_process": ":pv_core",
+    "delivery_apk": "/Users/frewily/projects/privateVault/.local/w01-a/PrivateVault-W01-A-arm64-debug-1c9b6467.apk",
+    "delivery_method": "APFS clone copy; independent artifact with shared storage blocks"
+  },
+  "aar": {
+    "scope": "AAR static only; no APK or Android runtime claim",
+    "aar": ".local/w01-a/openlist.aar",
+    "bytes": 41160017,
+    "sha256": "8545aea68dee052446d63b8ac640b3703e50953c3b75d9ed7827cf5441554d15",
+    "build_id": "pv-w01a-eb7fff012b4d24b9",
+    "abi": "arm64-v8a",
+    "load_alignments": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "elf_16kb_alignment_passed": true,
+    "jni_sha256": "86aa29cf7e85176b54c452cc203a0dde23a6c238370cc114953ea50a1be7ae58"
+  },
+  "toolchain": {
+    "flutter": "3.47.5",
+    "dart": "3.13.4",
+    "go": "go1.27.3",
+    "gomobile_commit": "19777044486779222400e9ca16c4306f9c6dbfa9",
+    "openlist_commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+    "jdk": "17.0.15",
+    "ndk": "28.2.13676358",
+    "native_api": 24,
+    "gradle": "9.3.1",
+    "agp": "9.1.0",
+    "kotlin_plugin": "2.4.0",
+    "kotlin_compiler_classpath": "org.jetbrains.kotlin:kotlin-compiler-embeddable:2.4.0"
+  },
+  "checks": {
+    "actual_android_assemble": "PASS",
+    "offline_assemble_recheck": "PASS; 6s, 67 tasks (6 executed/61 up-to-date)",
+    "project_jvm_tests": {
+      "status": "PASS",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "staleRepliesEndpointBoundariesAndInstanceProof",
+          "classname": "dev.privatevault.w01.CoreContractsTest",
+          "time": "0.021"
+        }
+      ],
+      "native_android_jni_binder_executed": false
+    },
+    "offline_unit_task_recheck": "PASS; up-to-date result reused, not counted as an additional test",
+    "host_core_go_smoke": {
+      "status": "PASS",
+      "tests": 1,
+      "covers": [
+        "actual Local core authentication and read",
+        "native fresh signing key matches actual upstream HTTP JWT",
+        "unauthenticated rejection",
+        "runtime driver allowlist",
+        "stop and fresh-process requirement"
+      ],
+      "android_runtime": false
+    },
+    "standalone_kotlin_contracts": "PASS; public HS256 vector/wrong key/tampering/header/length plus reply and endpoint guards",
+    "apk_static": {
+      "signature": "PASS APK v2, RSA2048, exactly prepared independent debug cert",
+      "permissions": "PASS exact INTERNET and application signature-only dynamic receiver permission",
+      "backup": "PASS excludes relevant cloud-backup and device-transfer domains",
+      "network": "PASS only exact 127.0.0.1 cleartext exception",
+      "service": "PASS private :pv_core",
+      "fixture": "PASS 14415 bytes and SHA-256",
+      "abi": "PASS arm64-v8a only",
+      "elf_and_zip_16kb": "PASS every native library"
+    },
+    "mac_shared_dart_this_batch": "No implementation changes; prior report28 runtime evidence retained, not rerun as new results",
+    "phone_A04_A09": "NOT EXECUTED"
+  },
+  "implementation_changes": [
+    "HS256 native core instance proof; signing key remains native-only and never placed on HTTP",
+    "release shrinkResources disabled consistently with minify setting",
+    "verified installed NDK metadata passed through pinned Flutter provisioning contract, no CMake/SDK installation",
+    "same-origin Google Maven TLS/SHA1 prefetch; no mirror or TLS bypass",
+    "APK static inspection and real Android-project JVM contract target"
+  ],
+  "official_google_prefetch": [
+    {
+      "coordinate": "com.android:signflinger:9.1.0",
+      "url": "https://dl.google.com/dl/android/maven2/com/android/signflinger/9.1.0/signflinger-9.1.0.jar",
+      "bytes": 15337,
+      "sha1": "7c41f72626807e344b3bd6ba06a75cd6c4c9d118",
+      "sha256": "bde5760f4ae032cf02851b3725e22ac391fc55792826c0258c9361378672692c"
+    },
+    {
+      "coordinate": "com.android:zipflinger:9.1.0",
+      "url": "https://dl.google.com/dl/android/maven2/com/android/zipflinger/9.1.0/zipflinger-9.1.0.jar",
+      "bytes": 67038,
+      "sha1": "8f244c1f655b3d3bdfce9da3ba0da33774e474b3",
+      "sha256": "d2ad6ddec6da2ae142a8fe3af2f2529f3fbf77852e2db7ff261ad7b924b119fa"
+    },
+    {
+      "coordinate": "com.android.tools:annotations:32.1.0",
+      "url": "https://dl.google.com/dl/android/maven2/com/android/tools/annotations/32.1.0/annotations-32.1.0.jar",
+      "bytes": 10680,
+      "sha1": "a9a04a78f42fdb0276a0fc7fd538890f856a9753",
+      "sha256": "3b4bb9620c17d19e5bd91ac1988080553573b4c3b739fdd92416f42f2daf3e78"
+    }
+  ],
+  "network": {
+    "cumulative_ledger": {
+      "schema_version": 1,
+      "limit_bytes": 3154116608,
+      "owner_allowance_bytes": 3221225472,
+      "accounted_bytes": 1381381555,
+      "measurement": "upstream encrypted received and sent bytes; 64MiB reserve",
+      "hosts": {
+        "go.dev": 6676,
+        "dl.google.com": 216275132,
+        "codeload.github.com": 1923522,
+        "services.gradle.org": 12878,
+        "github.com": 17456,
+        "release-assets.githubusercontent.com": 137231526,
+        "proxy.golang.org": 151352561,
+        "sum.golang.org": 16469430,
+        "storage.googleapis.com": 598225866,
+        "plugins.gradle.org": 185423,
+        "plugins-artifacts.gradle.org": 24560073,
+        "repo.maven.apache.org": 235121012
+      },
+      "grants": [
+        {
+          "id": "initial-1GiB",
+          "bytes": 1073741824
+        },
+        {
+          "id": "20261101-extra-2GiB",
+          "bytes": 2147483648,
+          "starting_accounted_bytes": 1006632960,
+          "authorization": "explicit user reply: allow up to 2GiB additional downloads"
+        }
+      ],
+      "previous_ledger_sha256": "38194d7574e86664a53f987707e0280311c72f88f392390ce01e8b12e8a14f73"
+    },
+    "this_grant_accounted_bytes": 374748595,
+    "this_grant_maximum_bytes": 2147483648,
+    "gateway_remaining_bytes": 1772735053,
+    "gateway_stopped": true,
+    "not_carrier_billing_measurement": true
+  },
+  "cleanup": {
+    "executed_build_and_test_commands_completed": true,
+    "owned_mac_app_core_processes": [],
+    "gateway_session_exited": true,
+    "shared_java_processes_not_terminated_by_sdk_path": true
+  },
+  "known_limits": [
+    "No Android installation/JNI/Binder/runtime evidence",
+    "Strict compile pruning incomplete; registry limited to Local/BaiduNetdisk/Crypt while additional upstream driver packages remain compiled",
+    "No real accounts, media, cloud, Crypt business, playback or synchronization",
+    "No complete outbound network capture",
+    "Deprecated pinned AGP/Kotlin DSL compatibility switches retained; no silent SDK upgrade"
+  ],
+  "source_sha256": {
+    "apps/privatevault/android/app/build.gradle.kts": "6c45e5bf951b6b54e4802d18b1c623d0115cdc902e4cd94a6078cfb34ecae5e1",
+    "apps/privatevault/android/app/src/main/AndroidManifest.xml": "56b26435325de7819e5ae1f389b2b1fae3219a8e8326ec9f880124de47789001",
+    "apps/privatevault/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java": "d7f6fca2e77f91bc202be83d7797f434e489c3cb552a73a1e27e44e93dcb20e4",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreEndpoint.kt": "772f6bfad6b7714706cd932f1afb0227b7194e65a866470e94a9f733ec6eda74",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreHostBridge.kt": "d36e77c58d05e2d200219b810d61147841cf3c5e92fe2d65737f005dd15cc9b0",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreProbe.kt": "76ba514e9fa480c077a5e5163b28a10fb775c257b74a787ad424043071981834",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreProtocol.kt": "24cc693badc716a26d0290c0f5fa0a6bf578b0a1e9fd26dbdb28e969e748eb61",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreReplyGate.kt": "90ca51ccc2c9991b7244368566d23e271070ad15d133f82f15ca261d2996adb7",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreService.kt": "e93967eacadaaefb2336ab3de535f9c896a1c9b0f0662e996dcb07aae4e829fd",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/CoreTokenProof.kt": "a85ec0c80c41d7acc82417a74e2af5427b7031c469bb87e8ee321f66e2af9093",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/GoCoreAdapter.kt": "75605fc5c53dfbbd1817579025147c0ed972eaae1fef4680c705db32110f542b",
+    "apps/privatevault/android/app/src/main/kotlin/dev/privatevault/w01/MainActivity.kt": "d5b978648e5a7214bac350b96f28f7ab34a75217ced2f3b484ced0b12f4845b0",
+    "apps/privatevault/android/app/src/main/res/xml/data_extraction_rules.xml": "f2f358d89c06fa712f6887b9bac1d9859b8843ec79f614084d32029efb76db5c",
+    "apps/privatevault/android/app/src/main/res/xml/network_security_config.xml": "9fa73b0651987288a63a5997d388394638c02487e941b3829f3897b99841998f",
+    "apps/privatevault/android/app/src/test/kotlin/dev/privatevault/w01/CoreContractsTest.kt": "242f24b6b4c8d8fe7a5cfd959dfe8c69ac7826e84c3b745ab69d96aa20b4dfe1",
+    "apps/privatevault/android/gradle.properties": "604760321295989b828bad6db4c89522bcb8ac4e7cd985885006ab433c1473aa",
+    "apps/privatevault/android/settings.gradle.kts": "257d11ce178e7ba83d1d1a881a905efc898f92aea69dfe37ac26a6259a34a3e9",
+    "apps/privatevault/lib/app.dart": "48726c6d6d146908dfa1c18b44d8f01dfc5a9d2de7d007fb2c214b5e6398043c",
+    "apps/privatevault/lib/core_host/android_core_host.dart": "f1b40e3c93149162a3610c81c0a3ab26f3fa3859b8a70f3622624dbb0e43381b",
+    "apps/privatevault/lib/core_host/channel_core_host.dart": "775be0fa956c0c4d7472152d23d3999d31e23c22f6ff808121ac4595da315676",
+    "apps/privatevault/lib/core_host/core_host.dart": "b787b10b10eff9176b181fa7fb54a350416cbdfca9fa83caf102a17cffd6bb17",
+    "apps/privatevault/lib/core_host/core_host_factory.dart": "4e431d66977833959e685bf770b402ba2801945a892d49885372225fd0da6567",
+    "apps/privatevault/lib/core_host/core_state.dart": "ea3b9f78211e691467ced9842b7d0a7fcbae12321d5a2589e01603e148ba8aff",
+    "apps/privatevault/lib/core_host/macos_core_host.dart": "2e28e56666a39ed2bba3d1c07f1a7e5e2485abc77467b6fd0cff82322d317dd9",
+    "apps/privatevault/lib/features/core_status/core_status_page.dart": "2932095a5b26a152bd35c7219a0c08d28c8c1ae999ab2bac45d6126c11d654a2",
+    "apps/privatevault/lib/main.dart": "b2565b36d8d1bb5c8c7292cfea261d9aa574a3d35534987b4c1a5a3f7f97faac",
+    "apps/privatevault/pubspec.lock": "a8ea97ca288738ec9ef669f694c0a4a8d59d345362611d02bffbdf5ee5b97d93",
+    "native/openlist_bridge/README.md": "740c3e9ee08a97ba2dd15f1b6c560580e147dd507436220e733d8dac7affb7ef",
+    "native/openlist_bridge/overlay/op/privatevault_driver_allowlist.go": "f83b40e320c9a53977dbbb7af0880ca291bac26d389b2d2f2811b008d6d8a9dc",
+    "native/openlist_bridge/pvcore.go": "f780040b9a044febad6ca7d114fc0cdef14b1a33bb01c5dd633acfa05eab9681",
+    "native/openlist_bridge/pvcore_test.go": "a1f26944015dfc2ac3704dd6b61383fd97cd0dc1fa23701256de4f0f41b8f05a",
+    "native/openlist_bridge/resources/assets/placeholder.txt": "8aed87558e24cccd187865521651d4399e727ed349cdf5cd3ee4467ec0b886e0",
+    "native/openlist_bridge/resources/images/placeholder.txt": "8aed87558e24cccd187865521651d4399e727ed349cdf5cd3ee4467ec0b886e0",
+    "native/openlist_bridge/resources/index.html": "a43b5e5b8e0a6dd1ac35df63a1f54ed53036e4052cbf7c3b358790e00ac58614",
+    "native/openlist_bridge/resources/static/placeholder.txt": "8aed87558e24cccd187865521651d4399e727ed349cdf5cd3ee4467ec0b886e0",
+    "native/openlist_bridge/resources/streamer/placeholder.txt": "8aed87558e24cccd187865521651d4399e727ed349cdf5cd3ee4467ec0b886e0",
+    "toolchains/shared-local.json": "ef9355fa577eacf36937ac497f086b13cf124d808c87b6bd77cad701efe27185",
+    "toolchains/w01-android.go.mod": "f1005b52c36bd2fa60809a14ca217376f773edb0a142cbf84b00c9687dc21ae2",
+    "toolchains/w01-android.go.sum": "3304ede0f5c43338a76d0001225a6e5dcf0a6292700db68f2efc054db5b4c627",
+    "toolchains/w01-android.json": "a446a78ac654aad264c889168bf509088b5ef7210f5f35dddfea605f7007e749",
+    "tools/build_w01_android_aar.sh": "6c864faa4cb6fcaf7a650e78eb376b47d02524de58ced81ca052334f1a83ed26",
+    "tools/build_w01_android_apk.sh": "bc34cabeae4dc8db5af167da44cffe8e5ae821f6bad6dbee605b86dc73279917",
+    "tools/check_w01_android_apk.py": "242b38ce89e3054dfa5386b465c8234c439b20d1d1d8cffec00c5328d3e5fb37",
+    "tools/check_w01_android_artifacts.py": "b10f434e087eb4c83098296476ca36126c0f5287d14b7312d1f6b44e6ddc0eb9",
+    "tools/check_w01_android_contracts.sh": "8f7cdc6075b5054c48fae76d5aa9bb66cf33c216fb5a1436ba3a50a67dad78f9",
+    "tools/check_w01_android_core.sh": "99b191aa5cc03b5fa2d3cf614255c59ff739c06c2b0948377c3b644bc6aede01",
+    "tools/check_w01_android_unit.sh": "86336cbc9155bb90de8342e762994d8e12f46572c05e7f2c335a81abbc8e807c",
+    "tools/kotlin/CheckW01Contracts.kt": "ad210528a0be94b5feeddacc190552565f44f4483f5baad7bb743005b4c6b5c2",
+    "tools/prefetch_w01_google_artifacts.py": "9c45494e637de763e4daa7bfd8e44cd5d789b457393903eb2497425d5564a413",
+    "tools/shared_toolchain_env.sh": "764aedc656a06f6893888c55277c4c6b08dca51924ae8cef55a928e1e92c1412",
+    "tools/stage_w01_android_bridge.py": "93ae9560a0170cfb571bf6291cb821802eec9dba5934323d36577e60a7ff7594",
+    "tools/test_w01_network_budget.py": "2a16d89ef15bb0502c2f2da23d2b750e259c7a9ed4dca80656cc5f269dc0929b",
+    "tools/w01_android_env.sh": "1ec7f7e7afd755c3d2ce97c7d655083b1f017fecd384b61f61d7e83c48d362ac",
+    "tools/w01_network_budget.py": "e6ef762fb75be61b9cf698831255944e2366b168b361c795adaa7e3652144be2"
+  },
+  "inspection_files_sha256": {
+    "AndroidManifest.xml": "1eac42f578a94a03309e9dd07a94a18dea426da59a7a82b1703563582f22f8e5",
+    "network_security_config.xml": "20c8f437b7790a633b1247c72368d8b769f9711b1fbb3cdd1f32286ea31604f4",
+    "data_extraction_rules.xml": "572879aae6296c1bb7ca12561f2a33fb15f9032682264dfb71e49a787371b7f6",
+    "signature.txt": "06eb0ebf639762b3e660468233f38535ad25a2f4b02addee2f3798a592679b70"
+  }
+}

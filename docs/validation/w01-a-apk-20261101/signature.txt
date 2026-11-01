@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=PrivateVault W01 Debug
+Signer #1 certificate SHA-256 digest: b742c39a2b3e4be2662ccd2e9bea874d3b7501aac3e984b7ecc0e650bd46db53
+Signer #1 certificate SHA-1 digest: ea9fc5a287dc6cf8a70c46117073b6cab4b68215
+Signer #1 certificate MD5 digest: c0efbe025b098f32150e8f1a0d18b7f9
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 7ab7dce072c07b068c2ea232a7553965f48b28655a64cbd5ec8b98f757ab884f
+Signer #1 public key SHA-1 digest: af3e1d5dc4a9a30df1a911b331d282085ea3847b
+Signer #1 public key MD5 digest: 749b0bfc80fc2a6c40fff4e11ab0a86f

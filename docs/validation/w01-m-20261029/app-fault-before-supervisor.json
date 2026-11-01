@@ -1,0 +1,7 @@
+{
+  "fault": "app_unexpected_exit",
+  "only_verified_test_process_signalled": true,
+  "target_exited": true,
+  "core_alive_after_fault": true,
+  "app_alive_after_fault": false
+}

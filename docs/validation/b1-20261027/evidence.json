@@ -1,0 +1,269 @@
+{
+  "preparation": {
+    "workspace": "/private/tmp/privatevault-b1-validation-20261027-6b1t9fv3",
+    "official_archive_sha256": "c845f509d784a936ce53610c5643cedd05223e42ceb63fce5ad1bacbca1bbcd7",
+    "binary_matches_archive": true,
+    "strict_signature_passed": true,
+    "fixture_bytes": 9763,
+    "fixture_sha256": "6e1b4f47442ab497a6beaff1226cad96d08a0d34f78015b53393649db1066f30",
+    "user_approved_cloud_root": "/PrivateVault-验证-20261027",
+    "maximum_media_objects": 2,
+    "cloud_file_operations_started": false
+  },
+  "initialization": {
+    "initialized": true,
+    "initial_cloud_mounts": 0,
+    "guest_disabled": true,
+    "download_signing_required": true,
+    "core_outbound_scope": "local core/relay only",
+    "relay_target_scope": "approved HTTPS hosts only"
+  },
+  "public-python-probe": {
+    "url": "https://api.oplist.org/",
+    "user_credentials_used": false,
+    "http_status": 403,
+    "tls_certificate_verified": true,
+    "http_error_received": true,
+    "body_bytes": 17,
+    "contains_cloudflare_marker": false,
+    "contains_openlist_marker": false
+  },
+  "public-curl-probe": {
+    "curl_exit_code": 0,
+    "http_status": 200,
+    "ssl_verify_result": 0,
+    "user_credentials_used": false
+  },
+  "network-preflight-worker": {
+    "direct_connect_errno": 1,
+    "direct_egress_denied": true,
+    "public_https_status": 200,
+    "certificate_verification_enabled": true,
+    "through_local_relay": true,
+    "public_preflight_client": "system curl",
+    "python_homepage_response_observed": 403,
+    "user_credentials_used": false
+  },
+  "relay-allowlist-preflight": {
+    "allowed_authorities_accepted": true,
+    "invalid_authorities_rejected": 5,
+    "actual_unapproved_connect_status": 403,
+    "credentials_sent_to_external_hosts": false
+  },
+  "root-check": {
+    "cloud_root": "/PrivateVault-验证-20261027",
+    "empty": true,
+    "entry_count": 0,
+    "parent_directory_listed_by_verifier": false
+  },
+  "provider-ready": {
+    "driver": "BaiduNetdisk",
+    "cloud_root": "/PrivateVault-验证-20261027",
+    "single_provider_owner": true,
+    "initialization_passed": true,
+    "new_seed_used_internally": true,
+    "credential_values_printed": false
+  },
+  "upload-intent-plain": {
+    "mode": "plain",
+    "local_path": "/cloud-test/plain/媒体/样本.png",
+    "source_bytes": 9763,
+    "application_attempt": 1,
+    "overwrite": false
+  },
+  "stopped-at-plain": {
+    "action": "plain",
+    "error_class": "RuntimeError",
+    "further_cloud_operations_allowed": false,
+    "raw_details_retained_privately": true
+  },
+  "failure-diagnostic": {
+    "mode": "plain",
+    "http_status": 200,
+    "openlist_code": 500,
+    "safe_message": "Post \"[URL withheld]\": failed to resolve host: c5.pcs.baidu.com: lookup c5.pcs.baidu.com: no such host",
+    "cloud_request_retry_performed_by_controller": false,
+    "crypt_stage_started": false
+  },
+  "provider-recovery-status": {
+    "provider_created": true,
+    "current_state_preserved_privately": true,
+    "refresh_value_changed_from_seed": false,
+    "old_seed_must_not_be_reimported": true,
+    "credential_values_printed": false
+  },
+  "process-exit": {
+    "relay": 0,
+    "core": 0
+  },
+  "relay-metrics": {
+    "accepted": 6,
+    "rejected": 1,
+    "connections": [
+      {
+        "host": "api.oplist.org",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 737,
+        "downstream_bytes": 3734,
+        "closed": true
+      },
+      {
+        "host": "api.oplist.org",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 590,
+        "downstream_bytes": 4710,
+        "closed": true
+      },
+      {
+        "accepted": false,
+        "reason": "target_outside_approved_allowlist"
+      },
+      {
+        "host": "api.oplist.org",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 590,
+        "downstream_bytes": 4708,
+        "closed": true
+      },
+      {
+        "host": "pan.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 2537,
+        "downstream_bytes": 7612,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "pan.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 13733,
+        "downstream_bytes": 20009,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      },
+      {
+        "host": "d.pcs.baidu.com",
+        "port": 443,
+        "accepted": true,
+        "upstream_bytes": 2322,
+        "downstream_bytes": 6511,
+        "closed": true,
+        "end_reason": "idle_timeout"
+      }
+    ],
+    "upstream_bytes": 20509,
+    "downstream_bytes": 47284
+  },
+  "dns-comparison": {
+    "normal": {
+      "exit_code": 0,
+      "results": [
+        {
+          "host": "c5.pcs.baidu.com",
+          "resolved": true,
+          "address_count": 1,
+          "credentials_used": false
+        },
+        {
+          "host": "pan.baidu.com",
+          "resolved": true,
+          "address_count": 2,
+          "credentials_used": false
+        }
+      ]
+    },
+    "core_policy": {
+      "exit_code": 0,
+      "results": [
+        {
+          "host": "c5.pcs.baidu.com",
+          "resolved": false,
+          "error_class": "gaierror",
+          "errno": 8,
+          "credentials_used": false
+        },
+        {
+          "host": "pan.baidu.com",
+          "resolved": false,
+          "error_class": "gaierror",
+          "errno": 8,
+          "credentials_used": false
+        }
+      ]
+    }
+  },
+  "dns-candidate-definition": {
+    "active_core_policy_unchanged": true,
+    "candidate_only": true,
+    "added_rule": "allow only local mDNSResponder Unix socket",
+    "original_policy_sha256": "24fd6e313f996456266abe5df4cb1a0d3ddaea200975859300a722bb77cd3e83",
+    "candidate_policy_sha256": "1900fc47a5ea1b4d61172cebad97c53accca9242d7e8b36423f48b5aa78e179f",
+    "cloud_retry_performed": false
+  },
+  "dns-candidate-check": {
+    "dns_results": [
+      {
+        "host": "c5.pcs.baidu.com",
+        "resolved": true,
+        "address_count": 1
+      },
+      {
+        "host": "pan.baidu.com",
+        "resolved": true,
+        "address_count": 2
+      }
+    ],
+    "direct_connect_errno": 1,
+    "direct_external_connection_denied": true,
+    "credentials_used": false
+  },
+  "final-resource-snapshot": {
+    "workspace_bytes": 151073102,
+    "system_free_bytes": 253132800000,
+    "root_mode": "0o700",
+    "private_mode": "0o700",
+    "plain_upload_application_attempts": 1,
+    "crypt_upload_application_attempts": 0,
+    "directory_api_calls_completed": [
+      "plain",
+      "plain/媒体"
+    ],
+    "cloud_objects_after_failure_requeried": false
+  },
+  "authorization": {
+    "user_statement": "目录已建，可以测试",
+    "approved_cloud_root": "/PrivateVault-验证-20261027",
+    "plain_application_attempts": 1,
+    "crypt_application_attempts": 0,
+    "extra_cloud_attempts_after_failure": 0,
+    "cloud_delete_operations": 0
+  },
+  "closeout": {
+    "recorded_at_utc": "2026-10-27T09:27:53.647594+00:00",
+    "core_and_relay_stopped": true,
+    "ports_15245_15246_listener_present": false,
+    "port_check": "lsof returned exit 1 with empty output",
+    "original_openlist_config_accessed": false,
+    "user_login_state_of_original_mount_verified": false,
+    "credential_values_exported": false,
+    "latest_test_provider_state_preserved_privately": true,
+    "candidate_policy_applied_to_real_core": false,
+    "cloud_object_existence_after_failure_requeried": false,
+    "cloud_upload_completion_claimed": false
+  },
+  "diagnostic_source": {
+    "repository": "OpenListTeam/OpenList",
+    "commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+    "path": "internal/net/serve.go",
+    "blob": "53604c3ecd606554e1c8579a2063e7443473ca4b",
+    "safeTransport_function_line": 368,
+    "system_profile_example": "/System/Library/Sandbox/Profiles/com.apple.auearlyboot.sb:68",
+    "source_read_only": true
+  },
+  "network_metrics_coverage": "Last supervisor run only; includes public homepage probes, TLS framing, provider initialization and metadata; not an exact whole-turn or media payload total."
+}

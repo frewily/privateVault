@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-27T08:24:38.160922+00:00",
+  "user_report": "已保存",
+  "local_receiver_status": {
+    "credential_file_present": true,
+    "completion_receipt_present": true,
+    "credential_file_mode": "0o600",
+    "regular_owned_file": true,
+    "receipt_ready": true,
+    "credential_contents_read": false
+  },
+  "selected_cloud_test_root": "/PrivateVault-验证-20261027/",
+  "application_name": "not recorded",
+  "authorization_scope_summary": "not recorded",
+  "baidu_api_validation_performed": false,
+  "original_mount_access_performed": false,
+  "cloud_test_execution_approved": false
+}

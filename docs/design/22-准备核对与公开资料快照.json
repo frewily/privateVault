@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "scope": "Read-only W01 preparation; no toolchain installation, product code, build, runtime service, device access, cloud access, commit or push",
+  "local_environment": {
+    "method": "Executable-path lookup, selected developer-directory lookup, file metadata and public SDK source.properties only; did not execute Flutter, Go, Android SDK tools, Java or Xcode builds",
+    "os": "macOS 27.0.1",
+    "architecture": "arm64",
+    "flutter_in_path": false,
+    "dart_in_path": false,
+    "go_in_path": false,
+    "xcode_at_standard_path": false,
+    "android_studio_at_standard_path": false,
+    "developer_directory": "/Library/Developer/CommandLineTools",
+    "java_path": "/opt/homebrew/opt/openjdk@17/bin/java",
+    "java_runtime_version_verified": false,
+    "android_sdk": {
+      "exists": true,
+      "platforms": [
+        "android-36"
+      ],
+      "build_tools": [
+        "36.0.0"
+      ],
+      "ndk": [
+        "28.2.13676358"
+      ],
+      "command_line_tools_directory_versions": [
+        "22.0"
+      ],
+      "platform_tools_properties_revision": "37.0.1",
+      "cmake_present": false,
+      "executed": false
+    },
+    "environment_variables": {
+      "ANDROID_HOME": "unset",
+      "ANDROID_SDK_ROOT": "unset",
+      "JAVA_HOME": "unset",
+      "FLUTTER_ROOT": "unset"
+    },
+    "project_volume_free_gib_observed": 221.3
+  },
+  "retained_public_core_archive": {
+    "path": "/private/tmp/privatevault-validation-20261026-Da3beZ/package/openlist-verified.tar.gz",
+    "present": true,
+    "size_bytes": 51573965,
+    "sha256": "c845f509d784a936ce53610c5643cedd05223e42ceb63fce5ad1bacbca1bbcd7",
+    "digest_rechecked": true,
+    "extracted_or_executed": false
+  },
+  "flutter_candidate": {
+    "tag": "3.47.5",
+    "commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+    "tag_resolution_url": "https://api.github.com/repos/flutter/flutter/git/ref/tags/3.47.5",
+    "engine_commit": "af7e796e161ae0bb1ff0758c71a7105418bd9ded",
+    "tool_pubspec_dart_constraint": "^3.11.0-0",
+    "bundled_dart_exact_version_verified": false,
+    "current_stable_branch_observed_commit": "737ba8f885dc774b53b442759999a312c9461e4e",
+    "note": "Tag and stable branch tip differ. Pin the observed release tag as the W01 candidate; do not call it the latest release or claim local compatibility. No download."
+  },
+  "sources": [
+    {
+      "id": "flutter_macos_setup",
+      "repository": "flutter/website",
+      "ref": "cbde491a5e311764713e3d5be3613ffb2ea7f33e",
+      "path": "sites/docs/src/content/platform-integration/macos/setup.md",
+      "blob_sha": "df2ffe2728473b431162f364bc62eff4651c7869",
+      "url": "https://github.com/flutter/website/blob/cbde491a5e311764713e3d5be3613ffb2ea7f33e/sites/docs/src/content/platform-integration/macos/setup.md",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "flutter_macos_building",
+      "repository": "flutter/website",
+      "ref": "cbde491a5e311764713e3d5be3613ffb2ea7f33e",
+      "path": "sites/docs/src/content/platform-integration/macos/building.md",
+      "blob_sha": "2b5d1b764c1f2ffb637a8ec2ae1b356a6eba7f61",
+      "url": "https://github.com/flutter/website/blob/cbde491a5e311764713e3d5be3613ffb2ea7f33e/sites/docs/src/content/platform-integration/macos/building.md",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "flutter_manual_install",
+      "repository": "flutter/website",
+      "ref": "cbde491a5e311764713e3d5be3613ffb2ea7f33e",
+      "path": "sites/docs/src/content/install/manual.md",
+      "blob_sha": "abb0bd4ca558b766fd8a2f3c1c6d0c99f3439fbb",
+      "url": "https://github.com/flutter/website/blob/cbde491a5e311764713e3d5be3613ffb2ea7f33e/sites/docs/src/content/install/manual.md",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "flutter_tag_engine",
+      "repository": "flutter/flutter",
+      "ref": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+      "path": "bin/internal/engine.version",
+      "blob_sha": "a7dfa16c90d40cf079279fdefa425365992af4a2",
+      "url": "https://github.com/flutter/flutter/blob/6a19cca56475dbfba1478ee68d7bd0c2ef891da1/bin/internal/engine.version",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "flutter_tools_dependencies",
+      "repository": "flutter/flutter",
+      "ref": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+      "path": "packages/flutter_tools/pubspec.yaml",
+      "blob_sha": "d7cf86eabad21076e8fb4a7a2f9b42713e608af2",
+      "url": "https://github.com/flutter/flutter/blob/6a19cca56475dbfba1478ee68d7bd0c2ef891da1/packages/flutter_tools/pubspec.yaml",
+      "read_date": "2026-10-29",
+      "runtime_verified": false,
+      "excerpt_lines": [
+        1,
+        35
+      ]
+    },
+    {
+      "id": "flutter_macos_template_entitlements",
+      "repository": "flutter/flutter",
+      "ref": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+      "path": "packages/flutter_tools/templates/app/macos.tmpl/Runner/DebugProfile.entitlements",
+      "blob_sha": "dddb8a30c851e7ef5b16a9108934bd1217b6b43f",
+      "url": "https://github.com/flutter/flutter/blob/6a19cca56475dbfba1478ee68d7bd0c2ef891da1/packages/flutter_tools/templates/app/macos.tmpl/Runner/DebugProfile.entitlements",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "mobile_android_build",
+      "repository": "OpenListTeam/OpenList-Mobile",
+      "ref": "585b70898cc30587d535f93d1f4ee383ae8d0646",
+      "path": "android/app/build.gradle",
+      "blob_sha": "a4c404063e01ee3a00b6bc0c41e0e627d91d08c0",
+      "url": "https://github.com/OpenListTeam/OpenList-Mobile/blob/585b70898cc30587d535f93d1f4ee383ae8d0646/android/app/build.gradle",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "mobile_gomobile_build",
+      "repository": "OpenListTeam/OpenList-Mobile",
+      "ref": "585b70898cc30587d535f93d1f4ee383ae8d0646",
+      "path": "openlist-lib/scripts/gobind.sh",
+      "blob_sha": "07872897a20e8d6be942859f935a171d469a585e",
+      "url": "https://github.com/OpenListTeam/OpenList-Mobile/blob/585b70898cc30587d535f93d1f4ee383ae8d0646/openlist-lib/scripts/gobind.sh",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "mobile_lifecycle_wrapper",
+      "repository": "OpenListTeam/OpenList-Mobile",
+      "ref": "585b70898cc30587d535f93d1f4ee383ae8d0646",
+      "path": "openlist-lib/openlistlib/server.go",
+      "blob_sha": "99a7c001819ba388e54b274ed461ee86dd5b7536",
+      "url": "https://github.com/OpenListTeam/OpenList-Mobile/blob/585b70898cc30587d535f93d1f4ee383ae8d0646/openlist-lib/openlistlib/server.go",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "mobile_settings_wrapper",
+      "repository": "OpenListTeam/OpenList-Mobile",
+      "ref": "585b70898cc30587d535f93d1f4ee383ae8d0646",
+      "path": "openlist-lib/openlistlib/settings.go",
+      "blob_sha": "b0abeafc9b4d0bfc3fa674c0808d0278afd08a1c",
+      "url": "https://github.com/OpenListTeam/OpenList-Mobile/blob/585b70898cc30587d535f93d1f4ee383ae8d0646/openlist-lib/openlistlib/settings.go",
+      "read_date": "2026-10-29",
+      "runtime_verified": false
+    },
+    {
+      "id": "openlist_config",
+      "repository": "OpenListTeam/OpenList",
+      "ref": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+      "path": "internal/conf/config.go",
+      "blob_sha": "f8423d590846e323cbe099b47630ccdf6bcf12d1",
+      "url": "https://github.com/OpenListTeam/OpenList/blob/25e4eb663ffb73991a68d85df4f690d48ad137a6/internal/conf/config.go",
+      "read_date": "2026-10-29",
+      "runtime_verified": false,
+      "excerpt_lines": [
+        1,
+        160
+      ]
+    },
+    {
+      "id": "openlist_go_requirements",
+      "repository": "OpenListTeam/OpenList",
+      "ref": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+      "path": "go.mod",
+      "blob_sha": "a225df35971a6b05760c25989cf0feabd1e17b94",
+      "url": "https://github.com/OpenListTeam/OpenList/blob/25e4eb663ffb73991a68d85df4f690d48ad137a6/go.mod",
+      "read_date": "2026-10-29",
+      "excerpt_lines": [
+        1,
+        30
+      ],
+      "runtime_verified": false
+    }
+  ],
+  "remaining_unknowns": [
+    "Full Xcode version/package size and Apple license acceptance",
+    "Actual Flutter build compatibility on macOS 27.0.1",
+    "Sandboxed child-helper packaging/signing and lifecycle",
+    "Android Go/gomobile/Gradle exact combined lock and repeated native init safety",
+    "Existing Android SDK/NDK compatibility with the future pinned Android build"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "observed_date": "2026-10-28",
+  "evidence_type": "user_report_after_single_test_password_replacement",
+  "test_mount": "/PrivateVault-C1-Crypt",
+  "user_report": "这次可以了，成功解密了",
+  "encrypted_png_display_confirmed_by_user": true,
+  "first_encrypted_png_open_after_mac_sleep_confirmed": false,
+  "mac_state_when_png_was_displayed": null,
+  "post_repair_password_equality_check_performed": false,
+  "phone_response_body_hash_checked": false,
+  "failure_evidence_preserved": "01-password-mismatch.json",
+  "accepted_current_result": "test Crypt decryption and PNG display passed by user report",
+  "architecture_clarification": "Phone local OpenList and Crypt access Baidu directly; Mac is outside the media data path.",
+  "mac_sleep_demonstration_is_current_required_gate": false,
+  "historical_sleep_first_open_case_marked_as_passed": false,
+  "mac_test_ports_15245_15246_listener_observed_at_closeout": false,
+  "mac_test_port_query_had_error_output": false,
+  "new_cloud_write_performed_by_assistant": false,
+  "raw_phone_configuration_or_secret_values_included": false
+}

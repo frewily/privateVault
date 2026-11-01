@@ -1,0 +1,9 @@
+{
+  "code": "launch_failed",
+  "command_failure": {
+    "exit": 1,
+    "program": "lsof",
+    "reason": "exit"
+  },
+  "stage": "verify_owned_listener"
+}

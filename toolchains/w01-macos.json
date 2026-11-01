@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "flutter_tag": "3.47.5",
+  "flutter_commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+  "flutter_engine": "af7e796e161ae0bb1ff0758c71a7105418bd9ded",
+  "openlist_version": "v4.2.8",
+  "openlist_commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+  "openlist_archive_sha256": "c845f509d784a936ce53610c5643cedd05223e42ceb63fce5ad1bacbca1bbcd7",
+  "openlist_source_binary_sha256": "f8ced5c3e34de944ddbfc187181b9666cfa076f02281d38e301dc56eaa82933e",
+  "fixture_sha256": "d70a3c38d62588d9a2b61b7f676fef022039df34c12c92bfade0129103005901",
+  "architecture": "arm64",
+  "bundle_id": "dev.privatevault.w01",
+  "xcode_version": "27.1",
+  "dart_version": "3.13.4",
+  "note": "W01-M local development build, sandboxed integration, parent-pipe supervision, force-quit recovery and clean shutdown verified. Source core and locally signed helpers retain separate digests; not a public release.",
+  "dart_sdk_archive_sha256": "a1cd3836851d59a65f3c03400b27837d47537c5ff2473fe8e600bdb49c6e828e",
+  "xcode_build": "27A9275",
+  "xcode_first_launch_check_passed": true,
+  "verified_on": "2026-10-30",
+  "w01_m_status": "verified"
+}

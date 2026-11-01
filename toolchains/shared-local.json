@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "adopted_on": "2026-11-01",
+  "policy": "Machine-shared installations and caches; each project pins versions. No automatic downloads or upgrades.",
+  "flutter": {
+    "version": "3.47.5",
+    "commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+    "engine": "af7e796e161ae0bb1ff0758c71a7105418bd9ded",
+    "dart": "3.13.4",
+    "home_relative": "Library/Developer/flutter/3.47.5"
+  },
+  "go": {
+    "version": "go1.27.3",
+    "home_relative": "Library/Developer/go/1.27.3"
+  },
+  "gomobile": {
+    "commit": "19777044486779222400e9ca16c4306f9c6dbfa9",
+    "home_relative": "Library/Developer/gomobile/197770444867"
+  },
+  "gradle": {
+    "version": "9.3.1",
+    "home_relative": "Library/Developer/gradle/9.3.1"
+  },
+  "caches_home_relative": {
+    "pub": ".pub-cache",
+    "go_modules": "go/pkg/mod",
+    "go_build": "Library/Caches/go-build",
+    "gradle_write": ".gradle",
+    "gradle_readonly_seed": "Library/Caches/Gradle/dependency-seed"
+  },
+  "legacy_project_paths": "Ignored .tools SDK/cache paths are compatibility symlinks; they are not additional installations.",
+  "download_allowance": "SDK migration used zero downloads; current W01-A additive grants are recorded in toolchains/w01-android.json and the cumulative ledger.",
+  "existing_default_flutter": {
+    "version": "3.47.8",
+    "home_relative": "Library/Developer/flutter/3.47.8",
+    "unchanged": true
+  },
+  "flutter_migration_note": "3.47.8 analysis and 13 tests passed, but Mac artifact cache was incomplete offline. Existing verified 3.47.5 moved into shared version storage without a version upgrade."
+}

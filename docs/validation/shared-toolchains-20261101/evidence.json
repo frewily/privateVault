@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "status": "COMPLETE_SHARED_TOOLCHAIN_MIGRATION",
+  "scope": "Owner-authorized shared SDK/cache migration and user-wide Go/Gradle commands; no new downloads or device/account/Git operations",
+  "shared_pins": {
+    "schema_version": 1,
+    "adopted_on": "2026-11-01",
+    "policy": "Machine-shared installations and caches; each project pins versions. No automatic downloads or upgrades.",
+    "flutter": {
+      "version": "3.47.5",
+      "commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+      "engine": "af7e796e161ae0bb1ff0758c71a7105418bd9ded",
+      "dart": "3.13.4",
+      "home_relative": "Library/Developer/flutter/3.47.5"
+    },
+    "go": {
+      "version": "go1.27.3",
+      "home_relative": "Library/Developer/go/1.27.3"
+    },
+    "gomobile": {
+      "commit": "19777044486779222400e9ca16c4306f9c6dbfa9",
+      "home_relative": "Library/Developer/gomobile/197770444867"
+    },
+    "gradle": {
+      "version": "9.3.1",
+      "home_relative": "Library/Developer/gradle/9.3.1"
+    },
+    "caches_home_relative": {
+      "pub": ".pub-cache",
+      "go_modules": "go/pkg/mod",
+      "go_build": "Library/Caches/go-build",
+      "gradle_write": ".gradle",
+      "gradle_readonly_seed": "Library/Caches/Gradle/dependency-seed"
+    },
+    "legacy_project_paths": "Ignored .tools SDK/cache paths are compatibility symlinks; they are not additional installations.",
+    "download_allowance": "Existing W01-A allowance remains exhausted; this migration adds zero downloads.",
+    "existing_default_flutter": {
+      "version": "3.47.8",
+      "home_relative": "Library/Developer/flutter/3.47.8",
+      "unchanged": true
+    },
+    "flutter_migration_note": "3.47.8 analysis and 13 tests passed, but Mac artifact cache was incomplete offline. Existing verified 3.47.5 moved into shared version storage without a version upgrade."
+  },
+  "compatibility_links": {
+    ".tools/flutter": "/Users/frewily/Library/Developer/flutter/3.47.5",
+    ".tools/go": "/Users/frewily/Library/Developer/go/1.27.3",
+    ".tools/go-bin": "/Users/frewily/Library/Developer/gomobile/197770444867",
+    ".tools/gradle-9.3.1": "/Users/frewily/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1",
+    ".tools/pub-cache": "/Users/frewily/.pub-cache",
+    ".tools/go-mod": "/Users/frewily/go/pkg/mod",
+    ".tools/gradle-home-w01-a": "/Users/frewily/.gradle",
+    ".local/w01-a/go-build": "/Users/frewily/Library/Caches/go-build"
+  },
+  "shell_configuration": {
+    ".zprofile": {
+      "original_content_preserved": true,
+      "backup_mode": "0600",
+      "managed_blocks": 1
+    },
+    ".zshrc": {
+      "original_content_preserved": true,
+      "backup_mode": "0600",
+      "managed_blocks": 1
+    }
+  },
+  "private_backups_not_copied_into_evidence": true,
+  "receipt_summary": {
+    "date": "2026-11-01",
+    "network_downloaded": 0,
+    "status": "complete",
+    "old_flutter_allocated_bytes": 2096885760,
+    "moves": [
+      {
+        "source": "/Users/frewily/projects/privateVault/.tools/go",
+        "shared": "/Users/frewily/Library/Developer/go/1.27.3"
+      },
+      {
+        "source": "/Users/frewily/projects/privateVault/.tools/go-bin",
+        "shared": "/Users/frewily/Library/Developer/gomobile/197770444867"
+      },
+      {
+        "source": "/Users/frewily/projects/privateVault/.tools/gradle-9.3.1",
+        "shared": "/Users/frewily/Library/Developer/gradle/9.3.1"
+      },
+      {
+        "source": "/Users/frewily/projects/privateVault/.tools/go-mod",
+        "shared": "/Users/frewily/go/pkg/mod"
+      },
+      {
+        "source": "/Users/frewily/projects/privateVault/.local/w01-a/go-build",
+        "shared": "/Users/frewily/Library/Caches/go-build"
+      },
+      {
+        "source": "/Users/frewily/projects/privateVault/.tools/gradle-home-w01-a/caches/modules-2",
+        "shared": "/Users/frewily/Library/Caches/Gradle/dependency-seed/modules-2"
+      },
+      {
+        "source": "/Users/frewily/projects/privateVault/.tools/flutter",
+        "shared": "/Users/frewily/Library/Developer/flutter/3.47.5"
+      }
+    ],
+    "public_pub_packages_moved": 190,
+    "global_shell_backups": [
+      "/Users/frewily/.config/development-tools/backups/20261101-privatevault/.zprofile",
+      "/Users/frewily/.config/development-tools/backups/20261101-privatevault/.zshrc"
+    ],
+    "retained_until_validation": [],
+    "shared_flutter": "/Users/frewily/Library/Developer/flutter/3.47.5",
+    "shared_pub_cache": "/Users/frewily/.pub-cache",
+    "gradle_readonly_dependency_seed": "/Users/frewily/Library/Caches/Gradle/dependency-seed",
+    "flutter_version_upgrade_applied": false,
+    "attempted_3_47_8": {
+      "dart_tests": 13,
+      "dart_analyze": "PASS",
+      "mac_regression": "blocked: incomplete Mac SDK cache; no archive downloaded"
+    },
+    "global_gradle_jdk": "17.0.15 via command wrapper, global JAVA_HOME preserved",
+    "canonical_gradle_wrapper_cache": "/Users/frewily/.gradle/wrapper/dists/gradle-9.3.1-bin/23ovyewtku6u96viwx3xl3oks/gradle-9.3.1",
+    "shared_installer_archive_cache": "/Users/frewily/Library/Caches/development-tools/downloads",
+    "gradle_distribution_file_hash_comparison_count": 314,
+    "cleanup": [
+      {
+        "name": "pub-cache-original",
+        "allocated_bytes_removed": 18452480,
+        "counts_as_previous_cache_cleanup": true
+      },
+      {
+        "name": "gradle-home-original",
+        "allocated_bytes_removed": 323334144,
+        "counts_as_previous_cache_cleanup": true
+      },
+      {
+        "name": "gradle-distribution-duplicate",
+        "allocated_bytes_removed": 152539136,
+        "counts_as_previous_cache_cleanup": false
+      }
+    ],
+    "old_cache_allocated_bytes_removed": 341786624,
+    "space_note": "Moved SDKs/caches are not counted as free space. The temporary duplicate Gradle extraction is excluded from old-cache cleanup totals. du allocation is not measured net filesystem space.",
+    "validation": {
+      "shared_flutter": "3.47.5",
+      "dart_analyze": "PASS",
+      "dart_tests": 13,
+      "mac_app_integration_tests": 1,
+      "mac_start_stop_cycles": 3,
+      "normal_mac_app_rebuilt": true,
+      "go_core_smoke": "PASS",
+      "aar_sha256": "ebe817a98dd00c50327b9dc68e39062465db5c888ae0b5a917d49cce351d90a0",
+      "aar_bytes": 41193717,
+      "aar_elf_16kb": "PASS",
+      "go_terminal": "go1.27.3",
+      "gradle_terminal": "9.3.1 with JDK17",
+      "standard_gradle_wrapper_offline": "PASS",
+      "kotlin_host_contracts": "PASS"
+    },
+    "apk_offline": {
+      "before_missing_classpath_count": 38,
+      "after_missing_classpath_count": 22,
+      "remaining_coordinates": [
+        "com.android.tools.build:apksig:9.1.0",
+        "com.android.tools:annotations:32.1.0",
+        "com.android:signflinger:9.1.0",
+        "com.android:zipflinger:9.1.0",
+        "com.google.errorprone:error_prone_annotations:2.28.0",
+        "com.google.guava:failureaccess:1.0.2",
+        "com.google.j2objc:j2objc-annotations:3.0.0",
+        "commons-codec:commons-codec:1.17.1",
+        "org.apache.commons:commons-lang3:3.16.0",
+        "org.apache.httpcomponents:httpclient:4.5.14",
+        "org.apache.httpcomponents:httpcore:4.4.16",
+        "org.bitbucket.b_c:jose4j:0.9.5",
+        "org.bouncycastle:bcprov-jdk18on:1.79",
+        "org.bouncycastle:bcutil-jdk18on:1.79",
+        "org.checkerframework:checker-qual:3.43.0",
+        "org.jetbrains.kotlin:kotlin-build-tools-api:2.4.0",
+        "org.jetbrains.kotlin:kotlin-daemon-client:2.4.0",
+        "org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.4.0",
+        "org.jetbrains.kotlin:kotlin-native-utils:2.4.0",
+        "org.jetbrains.kotlin:kotlin-tooling-core:2.4.0",
+        "org.jetbrains.kotlin:kotlin-util-io:2.4.0",
+        "org.jetbrains.kotlin:kotlin-util-klib:2.4.0"
+      ],
+      "apk_produced": false
+    }
+  },
+  "budget_unchanged": {
+    "accounted_bytes": 1006632960,
+    "owner_allowance_bytes": 1073741824,
+    "extra_download_bytes": 0
+  },
+  "validation": {
+    "shared_flutter": "3.47.5",
+    "dart_analyze": "PASS",
+    "dart_tests": 13,
+    "mac_app_integration_tests": 1,
+    "mac_start_stop_cycles": 3,
+    "normal_mac_app_rebuilt": true,
+    "go_core_smoke": "PASS",
+    "aar_sha256": "ebe817a98dd00c50327b9dc68e39062465db5c888ae0b5a917d49cce351d90a0",
+    "aar_bytes": 41193717,
+    "aar_elf_16kb": "PASS",
+    "go_terminal": "go1.27.3",
+    "gradle_terminal": "9.3.1 with JDK17",
+    "standard_gradle_wrapper_offline": "PASS",
+    "kotlin_host_contracts": "PASS",
+    "flutter_pub_lock_unchanged": true,
+    "mac_deep_strict_signature": "PASS",
+    "owned_app_core_processes": [],
+    "apk": "not generated; still missing offline classpath artifacts",
+    "trial_sdk_3_47_8_not_adopted": true
+  },
+  "project_input_sha256": {
+    "AGENTS.md": "5f88c882d24067e6a52fba727e1b236cb23e22adbf9697348ea74b128fe5b2c9",
+    "tools/shared_toolchain_env.sh": "764aedc656a06f6893888c55277c4c6b08dca51924ae8cef55a928e1e92c1412",
+    "tools/w01_android_env.sh": "1ec7f7e7afd755c3d2ce97c7d655083b1f017fecd384b61f61d7e83c48d362ac",
+    "tools/check_w01_dart.sh": "3603a0051e8e19643b7715c0dc9941d87ed0eb69857f4a777fe8a3e555ed9bf3",
+    "tools/run_w01_macos.sh": "d2fa269d1b3bd74d3cccfbf1287eb4663fbf2e6f1525d2de532c4bcda55dd339",
+    "tools/check_w01_macos_regression.sh": "e4e8ded211710143da3d885a8a6864527209ec44e7dbbf6f758382e0c83fac78",
+    "tools/build_w01_android_aar.sh": "6c864faa4cb6fcaf7a650e78eb376b47d02524de58ced81ca052334f1a83ed26",
+    "tools/build_w01_android_apk.sh": "b25a324cc6e9a8a628becaedcb900bd7432a74432655f41cc27c38d1a5bdf304",
+    "tools/check_w01_android_contracts.sh": "c0277dd71697a8e2d6e9c47557cbd8625e47d73d46f8bb0a49c2ef867c3919da",
+    "tools/prepare_w01_android.py": "e0b2750bf18188a43f718c62483df65d26a2e3567efcba0ef3d73e74c9a88f9f",
+    "tools/migrate_shared_toolchains.py": "e0ffe023707bc6e2a084634fb3b55b39b4778ed3ce8194c77d5c11968ac5e314",
+    "toolchains/shared-local.json": "d959afdc7fa7a47a958330518a13403b23ade657e97e014029c42f15ebf94bf0",
+    "toolchains/w01-android.json": "a7f544499cbecba0313343303f78c4783d8a5a69575db8f9af39bddd2f5b6de5",
+    "apps/privatevault/analysis_options.yaml": "d371d1668160635397128e37300829ab5af9de67dfdea80d2d6639df47b13f29",
+    "apps/privatevault/pubspec.lock": "a8ea97ca288738ec9ef669f694c0a4a8d59d345362611d02bffbdf5ee5b97d93"
+  },
+  "global_public_configuration_sha256": {
+    "/Users/frewily/.config/development-tools/env.zsh": "c7f9bdf7d83a81fa50db6d07a3981865d0c57891ba24dc4ce3358dcc35b1677d",
+    "/Users/frewily/.config/development-tools/README.md": "256744fb598938af5e8e5790adea8cebec4934f18a7a1c1d0d81187839280cd1",
+    "/Users/frewily/.local/bin/gradle": "71289c7e8f9ddb70482efe2eaef5af8c08b6579f2e83a12b33020819fb3cd190"
+  },
+  "historical_evidence_preserved": [
+    "docs/validation/23-W01-M执行结果-v0.1.md",
+    "docs/validation/27-W01-A执行结果-v0.1.md",
+    "docs/validation/w01-a-20261101/evidence.json"
+  ]
+}

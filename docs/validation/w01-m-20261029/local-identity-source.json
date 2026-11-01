@@ -1,0 +1,10 @@
+{
+  "repository": "OpenListTeam/OpenList",
+  "commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+  "path": "server/common/auth.go",
+  "blob_sha": "e29f4826d02ce1db28a0ae6472ee577a5ac2cc1e",
+  "url": "https://github.com/OpenListTeam/OpenList/blob/25e4eb663ffb73991a68d85df4f690d48ad137a6/server/common/auth.go",
+  "read_date": "2026-10-29",
+  "purpose": "Validate stock core HS256 token signature, admin claim, and validity period against the private per-run host-configured JWT key. No core modifications or new cryptographic algorithm.",
+  "runtime_validation": "recorded separately in evidence.json"
+}

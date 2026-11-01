@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-30",
+  "phase": "W01-A proposal only",
+  "scope": "Public source/metadata and local SDK metadata reads only; no SDK downloads, code generation, Go execution, AAR/APK builds, adb daemon, phone access, installs or commits.",
+  "selected_candidates": {
+    "flutter": {
+      "tag": "3.47.5",
+      "commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1"
+    },
+    "go": {
+      "version": "go1.27.3",
+      "tag_commit": "2aae1000ea1d4b28923b96db28acf4e3b99d6aff",
+      "file": "go1.27.3.darwin-arm64.tar.gz",
+      "archive_bytes": 68196737,
+      "sha256": "dd3908cf20959d798c1e06ebe5b72213f0505ce01373b40ce3110975a6cd99c2",
+      "metadata_url": "https://go.dev/dl/?mode=json&include=all",
+      "archive_url": "https://go.dev/dl/go1.27.3.darwin-arm64.tar.gz",
+      "downloaded": false,
+      "tag_resolution_url": "https://api.github.com/repos/golang/go/git/ref/tags/go1.27.3"
+    },
+    "gomobile": {
+      "repository": "golang/mobile",
+      "commit": "19777044486779222400e9ca16c4306f9c6dbfa9",
+      "observed_commit_date": "2026-10-11T03:45:28Z",
+      "module_go_requirement": "1.26.0",
+      "built": false,
+      "reference_resolution_url": "https://api.github.com/repos/golang/mobile/branches/master"
+    },
+    "openlist": {
+      "version": "v4.2.8",
+      "commit": "25e4eb663ffb73991a68d85df4f690d48ad137a6",
+      "go_requirement": "1.26.0",
+      "toolchain_directive": "go1.27.3"
+    },
+    "gradle": {
+      "version": "9.3.1",
+      "distribution": "bin",
+      "sha256": "b266d5ff6b90eada6dc3b20cb090e3731302e553a27c5d3e4df1f0d76beaff06",
+      "checksum_source": "https://services.gradle.org/distributions/gradle-9.3.1-bin.zip.sha256",
+      "downloaded": false
+    },
+    "android_gradle_plugin": "9.1.0",
+    "kotlin_plugin": "2.4.0",
+    "min_sdk": 24,
+    "compile_sdk": 36,
+    "target_sdk": 36,
+    "native_android_api": 24,
+    "ndk": "28.2.13676358",
+    "abi": "arm64-v8a",
+    "java_bootclasspath": "existing android-36/android.jar via explicit gomobile -bootclasspath"
+  },
+  "local_observations": {
+    "sdk_platform": "android-36",
+    "sdk_platform_revision": "2",
+    "build_tools": "36.0.0",
+    "ndk": "28.2.13676358",
+    "ndk_api_min": 21,
+    "ndk_api_max": 35,
+    "ndk_host_clang_architectures": [
+      "x86_64",
+      "arm64"
+    ],
+    "command_line_tools": "22.0",
+    "platform_tools": "37.0.1",
+    "jdk_release_metadata": "17.0.15 aarch64",
+    "go_project_tool_present": false,
+    "free_space_gib": 209.4,
+    "android_sdk_or_jdk_tools_executed": false
+  },
+  "phone": {
+    "model": "OnePlus Ace 5 Ultra",
+    "os": "Android 16",
+    "source": "user-reported, not queried in this turn",
+    "existing_openlist_version": "v4.2.5.26080717 (150)",
+    "live_abi_or_page_size_verified": false
+  },
+  "sources": [
+    {
+      "id": "mobile_init_reference",
+      "url": "https://github.com/OpenListTeam/OpenList-Mobile/blob/585b70898cc30587d535f93d1f4ee383ae8d0646/openlist-lib/scripts/init_openlist.sh",
+      "blob_sha": "0f8fffc6bc833866a7cf358a4fdf6923d33e3059",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "mobile_kotlin_reference",
+      "url": "https://github.com/OpenListTeam/OpenList-Mobile/blob/585b70898cc30587d535f93d1f4ee383ae8d0646/android/app/src/main/kotlin/com/openlist/mobile/model/openlist/OpenList.kt",
+      "blob_sha": "47f531b1c4d867ae0824e8f4639488164ef68458",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "openlist_go_requirements",
+      "url": "https://github.com/OpenListTeam/OpenList/blob/25e4eb663ffb73991a68d85df4f690d48ad137a6/go.mod",
+      "blob_sha": "a225df35971a6b05760c25989cf0feabd1e17b94",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "gomobile_module",
+      "url": "https://github.com/golang/mobile/blob/19777044486779222400e9ca16c4306f9c6dbfa9/go.mod",
+      "blob_sha": "5c5230a414c3b51102b7a7bdc15286f2411075a4",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "gomobile_android_bind",
+      "url": "https://github.com/golang/mobile/blob/19777044486779222400e9ca16c4306f9c6dbfa9/cmd/gomobile/bind_androidapp.go",
+      "blob_sha": "d3f2e190917c0c18399f35fd4dc9c43f830e6f84",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "mobile_lifecycle_reference",
+      "url": "https://github.com/OpenListTeam/OpenList-Mobile/blob/585b70898cc30587d535f93d1f4ee383ae8d0646/openlist-lib/openlistlib/server.go",
+      "blob_sha": "99a7c001819ba388e54b274ed461ee86dd5b7536",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "mobile_secret_log_reference",
+      "url": "https://github.com/OpenListTeam/OpenList-Mobile/blob/585b70898cc30587d535f93d1f4ee383ae8d0646/openlist-lib/openlistlib/settings.go",
+      "blob_sha": "b0abeafc9b4d0bfc3fa674c0808d0278afd08a1c",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "gomobile_ndk_selection",
+      "url": "https://github.com/golang/mobile/blob/19777044486779222400e9ca16c4306f9c6dbfa9/cmd/gomobile/env.go",
+      "blob_sha": "0234d4c5fac34bac564aff74ad8a5de0e7d750b5",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "gomobile_bootclasspath",
+      "url": "https://github.com/golang/mobile/blob/19777044486779222400e9ca16c4306f9c6dbfa9/cmd/gomobile/bind.go",
+      "blob_sha": "f942246cc662ed95cfd0548cfa57c34d3930e275",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "openlist_build_0",
+      "url": "https://github.com/OpenListTeam/OpenList/blob/25e4eb663ffb73991a68d85df4f690d48ad137a6/server/static/static.go",
+      "blob_sha": "200dc397db1526f2940c5c7c605a9de68ce81ba6",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "openlist_build_1",
+      "url": "https://github.com/OpenListTeam/OpenList/blob/25e4eb663ffb73991a68d85df4f690d48ad137a6/public/public.go",
+      "blob_sha": "e94146c3b0878744c5d1122378eab6f599eabb8b",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "openlist_build_2",
+      "url": "https://github.com/OpenListTeam/OpenList/blob/25e4eb663ffb73991a68d85df4f690d48ad137a6/cmd/root.go",
+      "blob_sha": "42121aac7b781274ee494e10d6f308eccf161100",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "openlist_build_3",
+      "url": "https://github.com/OpenListTeam/OpenList/blob/25e4eb663ffb73991a68d85df4f690d48ad137a6/internal/bootstrap/run.go",
+      "blob_sha": "558e297ca9667694a3e1430422addd53be0dd591",
+      "read_date": "2026-10-30",
+      "runtime_tested": false
+    },
+    {
+      "id": "flutter_template_gradle_utils.dart",
+      "url": "https://github.com/flutter/flutter/blob/6a19cca56475dbfba1478ee68d7bd0c2ef891da1/packages/flutter_tools/lib/src/android/gradle_utils.dart",
+      "blob_sha": "d0c2af17a1818510bafc3604ca2a6a3ca27ed92a",
+      "read_date": "2026-10-30",
+      "runtime_tested_on_android": false
+    },
+    {
+      "id": "flutter_template_gradle.properties.tmpl",
+      "url": "https://github.com/flutter/flutter/blob/6a19cca56475dbfba1478ee68d7bd0c2ef891da1/packages/flutter_tools/templates/app/android.tmpl/gradle.properties.tmpl",
+      "blob_sha": "e96108cfe4c4d200adab58b532e95774c88e485b",
+      "read_date": "2026-10-30",
+      "runtime_tested_on_android": false
+    },
+    {
+      "id": "flutter_template_build.gradle.kts.tmpl",
+      "url": "https://github.com/flutter/flutter/blob/6a19cca56475dbfba1478ee68d7bd0c2ef891da1/packages/flutter_tools/templates/app/android-kotlin.tmpl/app/build.gradle.kts.tmpl",
+      "blob_sha": "0225bd08985c2ed865a76fcdcfcdf89eb1abe876",
+      "read_date": "2026-10-30",
+      "runtime_tested_on_android": false
+    },
+    {
+      "id": "flutter_template_settings.gradle.kts.tmpl",
+      "url": "https://github.com/flutter/flutter/blob/6a19cca56475dbfba1478ee68d7bd0c2ef891da1/packages/flutter_tools/templates/app/android.tmpl/settings.gradle.kts.tmpl",
+      "blob_sha": "41bd0d50402c7e038e550f0aca35353331169f62",
+      "read_date": "2026-10-30",
+      "runtime_tested_on_android": false
+    }
+  ],
+  "unresolved_runtime_checks": [
+    "Combined Go/gomobile/NDK/core build",
+    "AGP9/Kotlin template and compatibility flags",
+    "16KB ELF and APK alignment plus actual page-size behavior",
+    "Minimal static resources satisfy pinned core router initialization",
+    "Bound-service Binder death/background/stop behavior",
+    "Actual phone install and execution after APK review"
+  ],
+  "build_policy": {
+    "driver_set": [
+      "Local",
+      "BaiduNetdisk",
+      "Crypt"
+    ],
+    "static_resources": "owned inert placeholder resources; not yet created",
+    "research_implementation_boundary": "No Android generation/build or dependency installation in proposal turn"
+  }
+}
